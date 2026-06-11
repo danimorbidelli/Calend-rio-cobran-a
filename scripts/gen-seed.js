@@ -87,6 +87,19 @@ function objectionsFor(icon, desc) {
 const events = [];
 const days = Object.keys(data).map(Number).sort((a, b) => a - b);
 
+// Volumetria estimada a partir do tamanho das faixas (base real do rascunho)
+const FAIXA = { 1: 188, 2: 299, 3: 92, 4: 19 }; // total 598
+function computeVolume(icon, desc) {
+  const dispatch = ["ti-phone-call", "ti-mail", "ti-message-2", "ti-microphone", "ti-robot", "ti-bolt", "ti-gavel"];
+  if (!dispatch.includes(icon)) return ""; // reports, ação preventiva, tags etc. sem volume
+  if (/F1\s*[-–]\s*F4/.test(desc)) return 598;                                  // "(F1-F4)" = toda a base
+  if (/100%\s*d(a|os)\s*(base|casos)|toda\s+a?\s*base|todas as faixas/i.test(desc)) return 598;
+  const toks = new Set((desc.match(/F([1-4])/g) || []).map((s) => Number(s[1])));
+  if (toks.size) { let v = 0; toks.forEach((n) => (v += FAIXA[n])); return v; }   // soma das faixas citadas
+  if (/100%/.test(desc)) return 598;                                            // dispatch p/ "100%" sem faixa
+  return "";
+}
+
 for (const day of days) {
   const item = data[day];
   const date = `2026-06-${pad(day)}`;
@@ -105,7 +118,7 @@ for (const day of days) {
       cat,
       title: titleFrom(label, desc),
       owner: ownerFor(icon),
-      volume: "",
+      volume: computeVolume(icon, desc),
       pitch: "",
       objections: objectionsFor(icon, desc),
       notes: desc,
