@@ -25,19 +25,39 @@ function uid() {
   return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 }
 
+const pad = (n) => String(n).padStart(2, "0");
+const timeOk = (s) => /^\d{1,2}:\d{2}$/.test(s);
+const toMin = (s) => { const [h, m] = s.split(":").map(Number); return h * 60 + (m || 0); };
+
 // Normaliza/valida um evento vindo do cliente
 function sanitize(body) {
   const dateOk = /^\d{4}-\d{2}-\d{2}$/.test(body.date || "");
   if (!dateOk) return { error: "Data inválida (use YYYY-MM-DD)." };
-  const hour = Number(body.hour);
-  if (!Number.isInteger(hour) || hour < 0 || hour > 23) return { error: "Hora inválida (0-23)." };
+
+  // Início: aceita "start" (HH:MM) ou, por compatibilidade, "hour".
+  let start = String(body.start || "").trim();
+  if (!start && body.hour != null && body.hour !== "") start = pad(Number(body.hour)) + ":00";
+  if (!timeOk(start)) return { error: "Horário de início inválido (use HH:MM)." };
+  const [sh, sm] = start.split(":").map(Number);
+  if (sh < 0 || sh > 23 || sm < 0 || sm > 59) return { error: "Horário de início fora do intervalo." };
+  start = pad(sh) + ":" + pad(sm);
+
+  // Fim: opcional; descartado se inválido ou <= início.
+  let end = String(body.end || "").trim();
+  if (end) {
+    if (!timeOk(end) || toMin(end) <= toMin(start)) end = "";
+    else { const [eh, em] = end.split(":").map(Number); end = pad(eh) + ":" + pad(em); }
+  }
+
   const title = String(body.title || "").trim();
   if (!title) return { error: "Título é obrigatório." };
   return {
     event: {
       id: body.id || uid(),
       date: body.date,
-      hour,
+      start,
+      end,
+      hour: sh,
       cat: String(body.cat || "outro"),
       title,
       owner: String(body.owner || "").trim(),
@@ -45,6 +65,8 @@ function sanitize(body) {
       pitch: String(body.pitch || "").trim(),
       objections: String(body.objections || "").trim(),
       notes: String(body.notes || "").trim(),
+      done: body.done === true || body.done === "true",
+      summaryOnly: body.summaryOnly === true || body.summaryOnly === "true",
       updatedAt: new Date().toISOString(),
     },
   };
@@ -97,25 +119,28 @@ app.post("/api/import", wrap(async (req, res) => {
 
 app.get("/api/health", (req, res) => res.json({ ok: true, storage: store.label }));
 
-// Semeia o calendário com o rascunho (seed.json) na primeira execução, quando
-// o armazenamento está vazio. Idempotente: ids determinísticos + ON CONFLICT.
-// Desative definindo SEED=off.
-async function seedIfEmpty() {
+// Versão do seed: ao mudar, o servidor reaplica as atividades-modelo (substitui
+// apenas os registros seed-*; eventos criados pela equipe são preservados).
+const SEED_VERSION = "3"; // v3: início/fim + done
+
+// Semeia/atualiza o calendário com o rascunho (seed.json). Desative com SEED=off.
+async function seedAndUpgrade() {
   if (process.env.SEED === "off") return;
   const seedPath = path.join(__dirname, "seed.json");
   if (!fs.existsSync(seedPath)) return;
-  const existing = await store.list({});
-  if (existing.length > 0) return;
+  const applied = await store.getMeta("seedVersion");
+  if (applied === SEED_VERSION) return; // já está na versão atual
   let seed;
   try { seed = JSON.parse(fs.readFileSync(seedPath, "utf8")); } catch (e) { return; }
   if (!Array.isArray(seed) || seed.length === 0) return;
   const stamped = seed.map((e) => ({ ...e, updatedAt: new Date().toISOString() }));
-  const total = await store.bulk(stamped, "merge");
-  console.log(`Seed aplicado: ${total} atividades importadas do rascunho.`);
+  const total = await store.replaceSeed(stamped);
+  await store.setMeta("seedVersion", SEED_VERSION);
+  console.log(`Seed v${SEED_VERSION} aplicado: ${stamped.length} atividades-modelo (total na base: ${total}).`);
 }
 
 store.init()
-  .then(seedIfEmpty)
+  .then(seedAndUpgrade)
   .then(() => {
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`Calendário de Cobrança rodando na porta ${PORT} — armazenamento: ${store.label}`);

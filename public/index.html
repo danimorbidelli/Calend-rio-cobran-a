@@ -6,43 +6,18 @@
 <title>Calendário de Cobrança — Movimento Hora a Hora</title>
 <style>
   :root {
-    --bg: #0f172a;
-    --panel: #1e293b;
-    --panel-2: #273449;
-    --border: #334155;
-    --text: #e2e8f0;
-    --muted: #94a3b8;
-    --accent: #38bdf8;
-    --accent-2: #0ea5e9;
-    --ok: #22c55e;
-    --warn: #f59e0b;
-    --danger: #ef4444;
-    --cat-pitch: #6366f1;
-    --cat-objecao: #f59e0b;
-    --cat-volumetria: #10b981;
-    --cat-movimento: #38bdf8;
-    --cat-reuniao: #a855f7;
-    --cat-outro: #64748b;
+    --bg: #0f172a; --panel: #1e293b; --panel-2: #273449; --border: #334155;
+    --text: #e2e8f0; --muted: #94a3b8; --accent: #38bdf8; --accent-2: #0ea5e9;
+    --ok: #22c55e; --warn: #f59e0b; --danger: #ef4444;
   }
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
-    background: var(--bg); color: var(--text); font-size: 14px;
-  }
-  header.app-header {
-    background: linear-gradient(135deg, #0ea5e9, #6366f1);
-    padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.4);
-  }
-  header.app-header h1 { margin: 0; font-size: 20px; letter-spacing: .3px; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+  header.app-header { background: linear-gradient(135deg, #0ea5e9, #6366f1); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.4); }
+  header.app-header h1 { margin: 0; font-size: 20px; }
   header.app-header .subtitle { font-size: 12px; opacity: .85; margin-top: 2px; }
   .toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 
-  button {
-    cursor: pointer; border: 1px solid var(--border); background: var(--panel-2);
-    color: var(--text); padding: 8px 14px; border-radius: 8px; font-size: 13px; transition: .15s;
-  }
+  button { cursor: pointer; border: 1px solid var(--border); background: var(--panel-2); color: var(--text); padding: 8px 14px; border-radius: 8px; font-size: 13px; transition: .15s; }
   button:hover { background: #344155; }
   button.primary { background: var(--accent-2); border-color: var(--accent-2); color: #04263a; font-weight: 600; }
   button.primary:hover { background: var(--accent); }
@@ -85,36 +60,41 @@
   .panel-main { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
   .panel-head { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--panel-2); flex-wrap: wrap; gap: 8px; }
 
-  /* ---- Visão DIA ---- */
-  .hour-row { display: grid; grid-template-columns: 70px 1fr; border-bottom: 1px solid var(--border); min-height: 64px; }
-  .hour-row:last-child { border-bottom: none; }
-  .hour-label { padding: 10px 8px; color: var(--muted); font-size: 13px; font-weight: 600; border-right: 1px solid var(--border); background: var(--panel-2); text-align: center; }
-  .hour-cell { padding: 8px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; cursor: pointer; transition: background .15s; }
-  .hour-cell:hover { background: rgba(56,189,248,.06); }
-  .add-hint { color: var(--muted); font-size: 12px; opacity: 0; align-self: center; }
-  .hour-cell:hover .add-hint { opacity: .7; }
+  /* ---- Grid com posicionamento por horário (Dia) ---- */
+  .cal-day-grid { position: relative; }
+  .cg-label { position: absolute; left: 0; width: 56px; text-align: right; padding-right: 8px; font-size: 11px; color: var(--muted); transform: translateY(-6px); }
+  .cg-line { position: absolute; left: 64px; right: 0; border-top: 1px solid var(--border); }
+  .cg-area { position: absolute; left: 64px; right: 8px; top: 0; bottom: 0; }
 
-  .event { border-radius: 8px; padding: 8px 10px; min-width: 160px; max-width: 260px; color: #fff; border-left: 4px solid rgba(0,0,0,.25); box-shadow: 0 1px 4px rgba(0,0,0,.3); cursor: pointer; }
-  .event .ev-cat { font-size: 10px; text-transform: uppercase; letter-spacing: .5px; opacity: .9; }
-  .event .ev-title { font-weight: 700; font-size: 13px; margin: 2px 0; }
-  .event .ev-meta { font-size: 11px; opacity: .92; line-height: 1.4; }
-
-  /* ---- Visão SEMANA ---- */
+  /* ---- Semana ---- */
   .week-grid { overflow-x: auto; }
-  .week-table { display: grid; min-width: 880px; }
-  .week-head-row, .week-body-row { display: grid; grid-template-columns: 60px repeat(7, 1fr); }
-  .week-head-cell { padding: 8px 6px; text-align: center; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); background: var(--panel-2); font-size: 12px; cursor: pointer; }
-  .week-head-cell.today { color: var(--accent); font-weight: 700; }
-  .week-head-cell small { display: block; color: var(--muted); }
-  .week-hour-label { padding: 6px; font-size: 12px; color: var(--muted); text-align: center; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--panel-2); }
-  .week-cell { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4px; min-height: 48px; display: flex; flex-direction: column; gap: 3px; cursor: pointer; }
-  .week-cell:hover { background: rgba(56,189,248,.06); }
-  .chip { font-size: 10px; padding: 2px 6px; border-radius: 5px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+  .wk { min-width: 920px; }
+  .wk-head { display: grid; grid-template-columns: 52px repeat(7, 1fr); }
+  .wk-corner { }
+  .wk-h { text-align: center; padding: 8px 4px; font-size: 12px; border-left: 1px solid var(--border); cursor: pointer; }
+  .wk-h.today { color: var(--accent); font-weight: 700; }
+  .wk-h small { display: block; color: var(--muted); }
+  .wk-body { position: relative; }
+  .wk-glabel { position: absolute; left: 0; width: 46px; text-align: right; padding-right: 6px; font-size: 11px; color: var(--muted); transform: translateY(-6px); }
+  .wk-line { position: absolute; left: 52px; right: 0; border-top: 1px solid var(--border); }
+  .wk-cols { position: absolute; left: 52px; right: 0; top: 0; bottom: 0; display: grid; grid-template-columns: repeat(7, 1fr); }
+  .wk-col { position: relative; border-left: 1px solid var(--border); }
 
-  /* ---- Visão MÊS ---- */
+  /* ---- Card de evento (posicionado) ---- */
+  .ev { position: absolute; border-radius: 7px; color: #fff; padding: 4px 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.35); cursor: pointer; border-left: 3px solid rgba(0,0,0,.25); }
+  .ev-time { font-size: 10px; opacity: .9; }
+  .ev-title { font-weight: 700; font-size: 12px; line-height: 1.25; padding-right: 64px; }
+  .ev-meta { font-size: 10px; opacity: .92; }
+  .ev.done { opacity: .5; }
+  .ev.done .ev-title { text-decoration: line-through; }
+  .ev-done { position: absolute; top: 4px; right: 4px; font-size: 10px; padding: 1px 7px; border-radius: 6px; border: 1px solid rgba(255,255,255,.55); background: rgba(0,0,0,.22); color: #fff; }
+  .ev-done:hover { background: rgba(0,0,0,.4); }
+  .ev.done .ev-done { background: var(--ok); border-color: var(--ok); color: #04250f; font-weight: 700; }
+
+  /* ---- Mês ---- */
   .month-grid { display: grid; grid-template-columns: repeat(7, 1fr); }
   .month-dow { padding: 8px; text-align: center; font-size: 12px; color: var(--muted); background: var(--panel-2); border-bottom: 1px solid var(--border); text-transform: uppercase; letter-spacing: .5px; }
-  .month-cell { min-height: 96px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6px; cursor: pointer; position: relative; }
+  .month-cell { min-height: 96px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6px; cursor: pointer; }
   .month-cell:hover { background: rgba(56,189,248,.06); }
   .month-cell.dim { opacity: .35; }
   .month-cell.today { box-shadow: inset 0 0 0 2px var(--accent); }
@@ -122,20 +102,44 @@
   .month-badges { margin-top: 6px; display: flex; flex-direction: column; gap: 3px; }
   .month-badge { font-size: 10px; padding: 1px 6px; border-radius: 5px; color: #fff; display: inline-flex; justify-content: space-between; gap: 6px; }
 
-  /* Modal */
+  /* Modal / overlay */
   .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: none; align-items: center; justify-content: center; z-index: 50; padding: 16px; }
   .overlay.open { display: flex; }
   .modal { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; width: 100%; max-width: 540px; max-height: 90vh; overflow: auto; }
-  .modal-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+  .modal-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--panel); }
   .modal-head h2 { margin: 0; font-size: 17px; }
   .modal-body { padding: 20px; display: grid; gap: 14px; }
-  .modal-foot { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 8px; }
+  .modal-foot { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 8px; position: sticky; bottom: 0; background: var(--panel); }
   .field { display: flex; flex-direction: column; gap: 5px; }
   .field label { font-size: 12px; color: var(--muted); }
   .field input, .field select, .field textarea { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); padding: 9px 10px; border-radius: 8px; font-size: 14px; font-family: inherit; }
   .field textarea { resize: vertical; min-height: 64px; }
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .chk { display: flex; gap: 8px; align-items: center; font-size: 14px; }
+  .chk input { width: 18px; height: 18px; }
   .close-x { background: transparent; border: none; font-size: 22px; color: var(--muted); padding: 0 4px; }
+
+  /* ---- Painel de Pitches padrão ---- */
+  .pitch-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+  .pitch-tab { font-size: 13px; }
+  .pitch-tab.active { background: var(--accent-2); color: #04263a; border-color: var(--accent-2); font-weight: 600; }
+  .pp-rules { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 600px) { .pp-rules { grid-template-columns: 1fr; } }
+  .pp-rule { border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; background: var(--panel-2); }
+  .pp-rule .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 6px; }
+  .pp-rule.no .lbl { color: #fca5a5; }
+  .pp-rule.yes .lbl { color: #86efac; }
+  .pp-section-label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin: 18px 0 8px; }
+  .pp-order { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; counter-reset: step; }
+  @media (max-width: 600px) { .pp-order { grid-template-columns: 1fr; } }
+  .pp-order .step { background: var(--panel-2); border-left: 3px solid var(--accent); border-radius: 8px; padding: 10px 12px; font-size: 13px; }
+  .pp-order .step b { color: var(--accent); display: block; font-size: 18px; }
+  .pp-pitch { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 12px; }
+  .pp-pitch .ph { background: var(--panel-2); padding: 10px 14px; font-size: 13px; font-weight: 600; display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+  .pp-pitch .pb { padding: 12px 14px; font-size: 14px; font-style: italic; color: var(--text); line-height: 1.6; }
+  .pp-check { list-style: none; padding: 0; margin: 0; }
+  .pp-check li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .pp-check li:last-child { border: none; }
 
   .footer-note { text-align: center; color: var(--muted); font-size: 12px; padding: 12px; }
   .hidden { display: none !important; }
@@ -167,6 +171,10 @@
 <div class="layout">
   <aside class="sidebar">
     <div class="card">
+      <button id="btnPitches" class="primary" style="width:100%">📋 Pitches padrão</button>
+    </div>
+
+    <div class="card">
       <h3>Data</h3>
       <div class="date-nav">
         <button id="btnPrev" class="ghost">‹</button>
@@ -181,6 +189,7 @@
       <h3 id="summaryTitle">Resumo</h3>
       <div class="metrics">
         <div class="metric"><div class="value" id="mTotal">0</div><div class="label">Atividades</div></div>
+        <div class="metric"><div class="value" id="mDone">0</div><div class="label">Concluídas</div></div>
         <div class="metric"><div class="value" id="mPitch">0</div><div class="label">Pitches</div></div>
         <div class="metric"><div class="value" id="mObj">0</div><div class="label">Objeções</div></div>
         <div class="metric"><div class="value" id="mVol">0</div><div class="label">Volumetria</div></div>
@@ -211,8 +220,8 @@
           <select id="endHour"></select>
         </div>
       </div>
-      <div id="viewDay"></div>
-      <div id="viewWeek" class="hidden week-grid"></div>
+      <div id="viewDay" style="padding:12px 16px"></div>
+      <div id="viewWeek" class="hidden week-grid" style="padding:12px 8px"></div>
       <div id="viewMonth" class="hidden"></div>
     </div>
     <div class="footer-note" id="footerNote"></div>
@@ -229,37 +238,32 @@
     <div class="modal-body">
       <input type="hidden" id="evId" />
       <div class="grid-2">
-        <div class="field">
-          <label>Data</label>
-          <input type="date" id="evDate" />
-        </div>
-        <div class="field">
-          <label>Horário</label>
-          <select id="evHour"></select>
-        </div>
+        <div class="field"><label>Data</label><input type="date" id="evDate" /></div>
+        <div class="field"><label>Categoria</label><select id="evCat"></select></div>
       </div>
-      <div class="field">
-        <label>Categoria</label>
-        <select id="evCat"></select>
+      <div class="grid-2">
+        <div class="field"><label>Início</label><input type="time" id="evStart" step="60" /></div>
+        <div class="field"><label>Fim (opcional)</label><input type="time" id="evEnd" step="60" /></div>
       </div>
       <div class="field">
         <label>Título da atividade</label>
         <input type="text" id="evTitle" placeholder="Ex.: Bloco de ligações — carteira 30 dias" />
       </div>
-      <div class="grid-2">
-        <div class="field">
-          <label>Responsável</label>
-          <input type="text" id="evOwner" placeholder="Nome do operador / equipe" list="ownerList" />
-          <datalist id="ownerList"></datalist>
-        </div>
-        <div class="field">
-          <label>Volumetria (qtd.)</label>
-          <input type="number" id="evVolume" min="0" placeholder="0" />
-        </div>
+      <div class="field">
+        <label>Responsável</label>
+        <select id="evOwnerPick"><option value="">— escolher da equipe —</option></select>
+        <input type="text" id="evOwner" placeholder="ou digite um nome" list="ownerList" style="margin-top:6px" />
+        <datalist id="ownerList"></datalist>
+      </div>
+      <div class="field">
+        <label>Volumetria (qtd.)</label>
+        <input type="number" id="evVolume" min="0" placeholder="0" />
       </div>
       <div class="field"><label>Pitch utilizado</label><textarea id="evPitch" placeholder="Roteiro / abordagem aplicada"></textarea></div>
       <div class="field"><label>Objeções registradas</label><textarea id="evObjections" placeholder="Principais objeções e contornos"></textarea></div>
       <div class="field"><label>Observações</label><textarea id="evNotes" placeholder="Resultados, metas, anotações livres"></textarea></div>
+      <label class="chk"><input type="checkbox" id="evDone" /> Atividade concluída</label>
+      <label class="chk"><input type="checkbox" id="evSummaryOnly" /> Somente resumo (não exibir no calendário)</label>
     </div>
     <div class="modal-foot">
       <button id="btnDelete" class="danger">Excluir</button>
@@ -271,14 +275,30 @@
   </div>
 </div>
 
+<!-- Painel de Pitches padrão -->
+<div class="overlay" id="pitchOverlay">
+  <div class="modal" style="max-width:780px">
+    <div class="modal-head">
+      <h2>📋 Pitches padrão</h2>
+      <button class="close-x" id="closePitch">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="pitch-tabs" id="pitchTabs"></div>
+      <div id="pitchContent"></div>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
 (function () {
   "use strict";
 
-  const PREFS_KEY = "calendario_cobranca_prefs_v2";
-  const CACHE_KEY = "calendario_cobranca_cache_v2"; // fallback offline
+  const PREFS_KEY = "calendario_cobranca_prefs_v3";
+  const CACHE_KEY = "calendario_cobranca_cache_v3";
+  const ROW = 56;            // pixels por hora
+  const DEFAULT_DUR = 30;    // minutos para evento sem fim definido
 
   const CATEGORIES = [
     { id: "pitch",      label: "Pitch",      color: "#6366f1" },
@@ -290,10 +310,49 @@
   ];
   const CAT_MAP = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 
+  // Responsáveis da equipe (para escolher no card)
+  const ROSTER = [
+    { group: "Liderança DW — Marília / Doutores", names: ["Ingrid Sampaio dos Santos", "Larissa da Silva Pereira", "Kelly Barroso Vitor", "Jessica dos Santos Pimenta", "Jessica Vitoria Dutra", "Kamily Patrocinio Guilherme", "Thaina Costa Araujo", "Ana Clara Andrade Ramos", "Thayna Lasnaux", "Gustavo Nunes de Oliveira"] },
+    { group: "Liderança Busca — Vitor / Busca", names: ["Gabriel Pereira de Carvalho", "Bruno da Silva Santana", "Leticia Cunha dos Santos", "Guilherme da Silva Sousa", "Larissa Vieira Coelho"] },
+    { group: "Liderança Soluções — Guilherme / Soluções", names: ["Taiza Pinheiro Elias", "Shirley"] },
+    { group: "Liderança MPI/IBS/CLI — Guilherme", names: ["Elisa de Paula Xavier"] },
+  ];
+  const ROSTER_NAMES = ROSTER.flatMap(g => g.names);
+
+  // Pitches padrão para consulta do analista
+  const STANDARD_PITCHES = [
+    {
+      id: "cancelamento",
+      title: "Solicitação de Cancelamento",
+      rules: [
+        { type: "no", label: "Nunca dizer", text: "\"Só cancelo se você pagar.\" — Cancelamento e cobrança são tratados como assuntos paralelos, nunca condicionais." },
+        { type: "yes", label: "Sempre fazer", text: "Cobrança apresentada como cuidado (\"pra você não ter problema depois\") e reunião com gerente de contas sempre oferecida." },
+      ],
+      order: [
+        "Acolher o pedido de cancelamento, sem travar o processo.",
+        "Oferecer o link de pagamento como cuidado, nunca como condição.",
+        "Agendar reunião com o gerente de contas para reversão.",
+        "Seguir com o trâmite normal de cancelamento.",
+      ],
+      pitches: [
+        { header: "Cliente neutro — pediu cancelamento sem motivo claro", body: "Compreendo seu pedido e já vou te orientar sobre o processo. Aproveitando que estamos falando, vi aqui que existe um valor em aberto na sua conta — para te poupar de juros ou restrição futura, posso já te enviar o link de pagamento agora? E, antes de finalizarmos, como você é um cliente importante pra gente, já estou acionando a agenda do seu gerente de contas para uma conversa rápida — às vezes ele consegue resolver o que está te incomodando." },
+        { header: "Cliente colaborativo — segue o fluxo sem resistência", body: "Sem problemas, vou seguir com sua solicitação. Só pra já deixar tudo certo do seu lado e não sobrar pendência no seu nome, você consegue regularizar esse valor em aberto comigo agora? E separado disso, vou agendar uma conversa com o gerente de contas — ele costuma trazer alternativas que muita gente não conhece." },
+        { header: "Cliente apressado — quer resolver rápido", body: "Entendo perfeitamente. Antes de seguir, deixa eu já agendar uma conversa rápida com o seu gerente de contas — ele tem autonomia pra rever condições e muitas vezes resolve o motivo do cancelamento. Posso confirmar [dia/horário]? Aproveito também e te mando o link do valor em aberto, assim você já deixa tudo certinho enquanto aguarda essa conversa." },
+        { header: "Cliente insatisfeito — reclamação como motivo", body: "Faz sentido você estar incomodado, e é por isso que quero que o gerente de contas fale com você o quanto antes — ele tem mais autonomia que eu pra resolver isso. Vou agendar essa conversa pra [dia]. E só aproveitando: identifiquei um valor pendente aqui, posso te passar o link agora pra você já deixar resolvido?" },
+      ],
+      checklist: [
+        "Verifiquei se há valor em aberto na conta?",
+        "Ofereci o link de pagamento, sem condicionar o cancelamento?",
+        "Agendei reunião com o gerente de contas (dia/horário confirmado)?",
+        "Segui com o trâmite de cancelamento?",
+      ],
+    },
+  ];
+
   let prefs = loadPrefs();
   let currentDate = todayStr();
   let view = "day";
-  let events = [];        // eventos carregados (do servidor ou cache) para o intervalo visível
+  let events = [];
   let online = false;
 
   const el = (id) => document.getElementById(id);
@@ -307,16 +366,23 @@
   }
   function savePrefs() { localStorage.setItem(PREFS_KEY, JSON.stringify(prefs)); }
 
-  // ---------- Datas ----------
+  // ---------- Datas / horários ----------
+  const pad = (n) => String(n).padStart(2, "0");
   function todayStr() { return new Date().toISOString().slice(0, 10); }
   function parseDate(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
   function toStr(dt) { return dt.toISOString().slice(0, 10); }
   function shiftDate(s, days) { const d = parseDate(s); d.setDate(d.getDate() + days); return toStr(d); }
-  function startOfWeek(s) { const d = parseDate(s); const wd = d.getDay(); d.setDate(d.getDate() - wd); return toStr(d); } // domingo
+  function startOfWeek(s) { const d = parseDate(s); d.setDate(d.getDate() - d.getDay()); return toStr(d); }
   function weekDates(s) { const start = startOfWeek(s); return Array.from({ length: 7 }, (_, i) => shiftDate(start, i)); }
   function fmtLong(s) { return parseDate(s).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" }); }
   function fmtWeekday(s) { return parseDate(s).toLocaleDateString("pt-BR", { weekday: "long" }); }
   function fmtMonthYear(s) { return parseDate(s).toLocaleDateString("pt-BR", { month: "long", year: "numeric" }); }
+
+  function toMin(hm) { const [h, m] = String(hm).split(":").map(Number); return h * 60 + (m || 0); }
+  function minToHM(min) { min = Math.max(0, Math.min(24 * 60 - 1, min)); return pad(Math.floor(min / 60)) + ":" + pad(min % 60); }
+  function startMinOf(e) { if (e.start) return toMin(e.start); if (e.hour != null) return Number(e.hour) * 60; return 9 * 60; }
+  function endMinOf(e) { if (e.end) return toMin(e.end); return startMinOf(e) + DEFAULT_DUR; }
+  function fmtRange(e) { const s = minToHM(startMinOf(e)); return e.end ? s + "–" + minToHM(endMinOf(e)) : s; }
 
   // ---------- API com fallback ----------
   async function api(path, opts) {
@@ -327,24 +393,19 @@
   function loadCache() { try { return JSON.parse(localStorage.getItem(CACHE_KEY)) || []; } catch (e) { return []; } }
   function saveCache(list) { localStorage.setItem(CACHE_KEY, JSON.stringify(list)); }
 
-  async function checkHealth() {
-    try { await api("/api/health"); setOnline(true); } catch (e) { setOnline(false); }
-  }
+  async function checkHealth() { try { await api("/api/health"); setOnline(true); } catch (e) { setOnline(false); } }
   function setOnline(v) {
     online = v;
-    const b = el("connBadge");
-    b.className = "conn " + (v ? "online" : "offline");
+    el("connBadge").className = "conn " + (v ? "online" : "offline");
     el("connText").textContent = v ? "Servidor conectado" : "Offline (local)";
     el("footerNote").textContent = v
       ? "Conectado ao servidor — alterações são compartilhadas com toda a equipe."
-      : "Sem servidor: usando armazenamento local deste navegador. Inicie o servidor (npm start) para compartilhar.";
+      : "Sem servidor: usando armazenamento local deste navegador.";
   }
 
-  // Intervalo visível conforme a view
   function visibleRange() {
     if (view === "day") return [currentDate, currentDate];
     if (view === "week") { const w = weekDates(currentDate); return [w[0], w[6]]; }
-    // mês: pega da primeira célula à última do grid (6 semanas)
     const d = parseDate(currentDate); const first = new Date(d.getFullYear(), d.getMonth(), 1);
     const gridStart = parseDate(startOfWeek(toStr(first)));
     const gridEnd = new Date(gridStart); gridEnd.setDate(gridEnd.getDate() + 41);
@@ -356,7 +417,6 @@
     if (online) {
       try {
         events = await api(`/api/events?from=${from}&to=${to}`);
-        // mantém cache atualizado para o que carregamos
         const cache = loadCache().filter(e => e.date < from || e.date > to);
         saveCache(cache.concat(events));
       } catch (e) { setOnline(false); events = loadCache().filter(e => e.date >= from && e.date <= to); }
@@ -364,35 +424,32 @@
       events = loadCache().filter(e => e.date >= from && e.date <= to);
     }
   }
-
   async function persistCreate(ev) {
-    if (online) { try { const saved = await api("/api/events", { method: "POST", body: JSON.stringify(ev) }); return saved; } catch (e) { setOnline(false); } }
-    const cache = loadCache(); cache.push(ev); saveCache(cache); return ev;
+    if (online) { try { return await api("/api/events", { method: "POST", body: JSON.stringify(ev) }); } catch (e) { setOnline(false); } }
+    const c = loadCache(); c.push(ev); saveCache(c); return ev;
   }
   async function persistUpdate(ev) {
     if (online) { try { return await api("/api/events/" + ev.id, { method: "PUT", body: JSON.stringify(ev) }); } catch (e) { setOnline(false); } }
-    const cache = loadCache(); const i = cache.findIndex(e => e.id === ev.id); if (i >= 0) cache[i] = ev; else cache.push(ev); saveCache(cache); return ev;
+    const c = loadCache(); const i = c.findIndex(e => e.id === ev.id); if (i >= 0) c[i] = ev; else c.push(ev); saveCache(c); return ev;
   }
   async function persistDelete(id) {
     if (online) { try { await api("/api/events/" + id, { method: "DELETE" }); return; } catch (e) { setOnline(false); } }
     saveCache(loadCache().filter(e => e.id !== id));
   }
-
   function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 8); }
 
   // ---------- Filtros ----------
-  function passesFilter(e) {
-    return !prefs.hiddenCats.includes(e.cat) && (!prefs.teamFilter || e.owner === prefs.teamFilter);
-  }
+  function passesFilter(e) { return !prefs.hiddenCats.includes(e.cat) && (!prefs.teamFilter || e.owner === prefs.teamFilter); }
   function eventsOn(date) { return events.filter(e => e.date === date && passesFilter(e)); }
-
+  // atividades exibidas na grade (exclui registros "somente resumo")
+  function gridEventsOn(date) { return eventsOn(date).filter(e => !e.summaryOnly); }
   function allOwners() {
-    const set = new Set();
+    const set = new Set(ROSTER_NAMES);
     loadCache().concat(events).forEach(e => { if (e.owner) set.add(e.owner); });
     return [...set].sort();
   }
 
-  // ---------- Render: filtros e equipe ----------
+  // ---------- Sidebar ----------
   function renderFilters() {
     const wrap = el("filters"); wrap.innerHTML = "";
     CATEGORIES.forEach(cat => {
@@ -415,26 +472,99 @@
     allOwners().forEach(o => { const opt = document.createElement("option"); opt.value = o; dl.appendChild(opt); });
   }
 
-  // ---------- Resumo ----------
   function renderSummary() {
     const [from, to] = visibleRange();
     const list = events.filter(e => e.date >= from && e.date <= to && passesFilter(e));
+    const cal = list.filter(e => !e.summaryOnly); // atividades no calendário
     el("summaryTitle").textContent = view === "day" ? "Resumo do dia" : view === "week" ? "Resumo da semana" : "Resumo do mês";
-    el("mTotal").textContent = list.length;
-    el("mPitch").textContent = list.filter(e => e.cat === "pitch").length;
-    el("mObj").textContent = list.filter(e => e.cat === "objecao").length;
+    el("mTotal").textContent = cal.length;
+    el("mDone").textContent = cal.filter(e => e.done).length;
+    el("mPitch").textContent = list.filter(e => e.cat === "pitch" || (e.pitch && e.pitch.trim())).length;
+    el("mObj").textContent = list.filter(e => e.cat === "objecao" || (e.objections && e.objections.trim())).length;
     el("mVol").textContent = list.reduce((s, e) => s + (Number(e.volume) || 0), 0);
   }
 
   // ---------- Util ----------
   function escapeHtml(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
-  function truncate(s, n) { return s.length > n ? s.slice(0, n) + "…" : s; }
   function fillHourSelect(select, selected) {
     select.innerHTML = "";
-    for (let h = 0; h < 24; h++) { const o = document.createElement("option"); o.value = h; o.textContent = String(h).padStart(2, "0") + ":00"; if (h === selected) o.selected = true; select.appendChild(o); }
+    for (let h = 0; h < 24; h++) { const o = document.createElement("option"); o.value = h; o.textContent = pad(h) + ":00"; if (h === selected) o.selected = true; select.appendChild(o); }
+  }
+  function divEl(cls, txt) { const d = document.createElement("div"); d.className = cls; if (txt != null) d.textContent = txt; return d; }
+
+  // Distribui eventos sobrepostos em colunas
+  function layoutColumns(items) {
+    const evs = items.slice().sort((a, b) => a.s - b.s || a.e2 - b.e2);
+    let clusterStart = 0, maxEnd = -1, colsEnd = [];
+    const finalize = (a, b) => { const n = colsEnd.length || 1; for (let k = a; k < b; k++) evs[k].cols = n; };
+    for (let n = 0; n < evs.length; n++) {
+      const it = evs[n];
+      if (n > clusterStart && it.s >= maxEnd) { finalize(clusterStart, n); clusterStart = n; colsEnd = []; maxEnd = -1; }
+      let placed = false;
+      for (let i = 0; i < colsEnd.length; i++) { if (colsEnd[i] <= it.s) { it.col = i; colsEnd[i] = it.e2; placed = true; break; } }
+      if (!placed) { it.col = colsEnd.length; colsEnd.push(it.e2); }
+      maxEnd = Math.max(maxEnd, it.e2);
+    }
+    finalize(clusterStart, evs.length);
+    return evs;
   }
 
-  // ---------- Render views ----------
+  function clickMin(ev, host) {
+    const y = ev.offsetY;
+    let min = prefs.startHour * 60 + Math.round((y / ROW * 60) / 15) * 15;
+    return Math.max(prefs.startHour * 60, Math.min((prefs.endHour + 1) * 60 - 15, min));
+  }
+
+  function buildCard(e) {
+    const cat = CAT_MAP[e.cat] || CAT_MAP.outro;
+    const div = document.createElement("div");
+    div.className = "ev" + (e.done ? " done" : "");
+    div.style.background = cat.color;
+    const meta = [];
+    if (e.owner) meta.push("👤 " + escapeHtml(e.owner));
+    if (e.volume) meta.push("📊 " + escapeHtml(String(e.volume)));
+    div.innerHTML = `<div class="ev-time">${escapeHtml(fmtRange(e))} · ${escapeHtml(cat.label)}</div>` +
+      `<div class="ev-title">${escapeHtml(e.title || "(sem título)")}</div>` +
+      (meta.length ? `<div class="ev-meta">${meta.join(" · ")}</div>` : "");
+    const btn = document.createElement("button");
+    btn.className = "ev-done";
+    btn.textContent = e.done ? "✓ Concluída" : "Concluir";
+    btn.title = e.done ? "Concluída — clique para reabrir" : "Marcar como concluída";
+    btn.onclick = (evt) => { evt.stopPropagation(); toggleDone(e); };
+    div.appendChild(btn);
+    div.onclick = (evt) => { evt.stopPropagation(); openModal(e); };
+    return div;
+  }
+
+  function positionInto(container, dayEvents) {
+    const gridStart = prefs.startHour * 60;
+    const gridEnd = (prefs.endHour + 1) * 60;
+    const items = dayEvents.map(e => {
+      let s = startMinOf(e), en = endMinOf(e);
+      if (en <= s) en = s + DEFAULT_DUR;
+      return { e, s, e2: en };
+    });
+    layoutColumns(items).forEach(it => {
+      const s = Math.max(it.s, gridStart), en = Math.min(it.e2, gridEnd);
+      if (en <= gridStart || s >= gridEnd) return;
+      const top = (s - gridStart) / 60 * ROW;
+      const h = Math.max((en - s) / 60 * ROW, 22);
+      const card = buildCard(it.e);
+      card.style.top = top + "px";
+      card.style.height = (h - 3) + "px";
+      card.style.left = `calc(${(it.col / it.cols) * 100}% + 2px)`;
+      card.style.width = `calc(${100 / it.cols}% - 4px)`;
+      container.appendChild(card);
+    });
+  }
+
+  async function toggleDone(e) {
+    const updated = Object.assign({}, e, { done: !e.done });
+    try { await persistUpdate(updated); await loadEvents(); render(); }
+    catch (err) { alert("Erro ao atualizar: " + err.message); }
+  }
+
+  // ---------- Render ----------
   function render() {
     el("viewDay").classList.toggle("hidden", view !== "day");
     el("viewWeek").classList.toggle("hidden", view !== "week");
@@ -449,91 +579,76 @@
 
   function renderDay() {
     el("panelTitle").textContent = "Agenda — " + fmtLong(currentDate);
-    const body = el("viewDay"); body.innerHTML = "";
+    const host = el("viewDay"); host.innerHTML = "";
+    const grid = divEl("cal-day-grid");
+    grid.style.height = ((prefs.endHour - prefs.startHour + 1) * ROW) + "px";
     for (let h = prefs.startHour; h <= prefs.endHour; h++) {
-      const row = document.createElement("div"); row.className = "hour-row";
-      const label = document.createElement("div"); label.className = "hour-label"; label.textContent = String(h).padStart(2, "0") + ":00";
-      const cell = document.createElement("div"); cell.className = "hour-cell";
-      cell.onclick = (ev) => { if (ev.target === cell || ev.target.classList.contains("add-hint")) openModal(null, currentDate, h); };
-      const hint = document.createElement("span"); hint.className = "add-hint"; hint.textContent = "+ clique para adicionar"; cell.appendChild(hint);
-      eventsOn(currentDate).filter(e => Number(e.hour) === h).forEach(e => cell.appendChild(renderEventCard(e)));
-      row.appendChild(label); row.appendChild(cell); body.appendChild(row);
+      const top = (h - prefs.startHour) * ROW;
+      const lab = divEl("cg-label", pad(h) + ":00"); lab.style.top = top + "px"; grid.appendChild(lab);
+      const ln = divEl("cg-line"); ln.style.top = top + "px"; grid.appendChild(ln);
     }
-  }
-
-  function renderEventCard(e) {
-    const cat = CAT_MAP[e.cat] || CAT_MAP.outro;
-    const div = document.createElement("div"); div.className = "event"; div.style.background = cat.color;
-    let meta = "";
-    if (e.owner) meta += `👤 ${escapeHtml(e.owner)}<br/>`;
-    if (e.volume) meta += `📊 ${escapeHtml(String(e.volume))} contatos<br/>`;
-    if (e.objections) meta += `⚠️ ${escapeHtml(truncate(e.objections, 50))}`;
-    div.innerHTML = `<div class="ev-cat">${cat.label}</div><div class="ev-title">${escapeHtml(e.title || "(sem título)")}</div>` + (meta ? `<div class="ev-meta">${meta}</div>` : "");
-    div.onclick = (ev) => { ev.stopPropagation(); openModal(e, e.date, e.hour); };
-    return div;
+    const area = divEl("cg-area");
+    area.onclick = (ev) => { if (ev.target === area) openModal(null, { date: currentDate, start: minToHM(clickMin(ev, area)) }); };
+    positionInto(area, gridEventsOn(currentDate));
+    grid.appendChild(area);
+    host.appendChild(grid);
   }
 
   function renderWeek() {
     const days = weekDates(currentDate);
     el("panelTitle").textContent = "Semana de " + fmtLong(days[0]) + " a " + fmtLong(days[6]);
-    const wrap = el("viewWeek"); wrap.innerHTML = "";
-    const table = document.createElement("div"); table.className = "week-table";
-
-    const head = document.createElement("div"); head.className = "week-head-row";
-    head.appendChild(cellDiv("week-head-cell", "")); // canto
+    const host = el("viewWeek"); host.innerHTML = "";
+    const wrap = divEl("wk");
+    const head = divEl("wk-head");
+    head.appendChild(divEl("wk-corner", ""));
     days.forEach(d => {
-      const c = document.createElement("div");
-      c.className = "week-head-cell" + (d === todayStr() ? " today" : "");
-      c.innerHTML = `${parseDate(d).toLocaleDateString("pt-BR", { weekday: "short" })}<small>${parseDate(d).getDate()}/${parseDate(d).getMonth() + 1}</small>`;
+      const c = divEl("wk-h" + (d === todayStr() ? " today" : ""));
+      const dt = parseDate(d);
+      c.innerHTML = `${dt.toLocaleDateString("pt-BR", { weekday: "short" })}<small>${dt.getDate()}/${dt.getMonth() + 1}</small>`;
       c.onclick = () => { currentDate = d; setView("day"); };
       head.appendChild(c);
     });
-    table.appendChild(head);
+    wrap.appendChild(head);
 
+    const body = divEl("wk-body");
+    body.style.height = ((prefs.endHour - prefs.startHour + 1) * ROW) + "px";
     for (let h = prefs.startHour; h <= prefs.endHour; h++) {
-      const row = document.createElement("div"); row.className = "week-body-row";
-      row.appendChild(cellDiv("week-hour-label", String(h).padStart(2, "0") + "h"));
-      days.forEach(d => {
-        const cell = document.createElement("div"); cell.className = "week-cell";
-        cell.onclick = (ev) => { if (ev.target === cell) openModal(null, d, h); };
-        eventsOn(d).filter(e => Number(e.hour) === h).forEach(e => {
-          const cat = CAT_MAP[e.cat] || CAT_MAP.outro;
-          const chip = document.createElement("div"); chip.className = "chip"; chip.style.background = cat.color;
-          chip.textContent = e.title || cat.label; chip.title = `${cat.label}: ${e.title}` + (e.owner ? ` (${e.owner})` : "");
-          chip.onclick = (ev) => { ev.stopPropagation(); openModal(e, e.date, e.hour); };
-          cell.appendChild(chip);
-        });
-        row.appendChild(cell);
-      });
-      table.appendChild(row);
+      const top = (h - prefs.startHour) * ROW;
+      const lab = divEl("wk-glabel", pad(h) + "h"); lab.style.top = top + "px"; body.appendChild(lab);
+      const ln = divEl("wk-line"); ln.style.top = top + "px"; body.appendChild(ln);
     }
-    wrap.appendChild(table);
+    const cols = divEl("wk-cols");
+    days.forEach(d => {
+      const col = divEl("wk-col");
+      col.onclick = (ev) => { if (ev.target === col) openModal(null, { date: d, start: minToHM(clickMin(ev, col)) }); };
+      positionInto(col, gridEventsOn(d));
+      cols.appendChild(col);
+    });
+    body.appendChild(cols);
+    wrap.appendChild(body);
+    host.appendChild(wrap);
   }
 
   function renderMonth() {
     el("panelTitle").textContent = "Mês — " + fmtMonthYear(currentDate);
-    const wrap = el("viewMonth"); wrap.innerHTML = "";
-    const grid = document.createElement("div"); grid.className = "month-grid";
-    ["dom","seg","ter","qua","qui","sex","sáb"].forEach(d => grid.appendChild(cellDiv("month-dow", d)));
-
+    const host = el("viewMonth"); host.innerHTML = "";
+    const grid = divEl("month-grid");
+    ["dom", "seg", "ter", "qua", "qui", "sex", "sáb"].forEach(d => grid.appendChild(divEl("month-dow", d)));
     const d = parseDate(currentDate); const month = d.getMonth();
-    const first = new Date(d.getFullYear(), month, 1);
-    let cur = parseDate(startOfWeek(toStr(first)));
+    let cur = parseDate(startOfWeek(toStr(new Date(d.getFullYear(), month, 1))));
     for (let i = 0; i < 42; i++) {
       const ds = toStr(cur);
-      const cell = document.createElement("div");
-      cell.className = "month-cell" + (cur.getMonth() !== month ? " dim" : "") + (ds === todayStr() ? " today" : "");
-      const num = document.createElement("div"); num.className = "month-day-num"; num.textContent = cur.getDate(); cell.appendChild(num);
-
-      const dayList = eventsOn(ds);
-      if (dayList.length) {
-        const badges = document.createElement("div"); badges.className = "month-badges";
-        const total = dayList.length;
-        const vol = dayList.reduce((s, e) => s + (Number(e.volume) || 0), 0);
-        const b1 = document.createElement("span"); b1.className = "month-badge"; b1.style.background = "#0ea5e9"; b1.innerHTML = `<span>Ativid.</span><span>${total}</span>`; badges.appendChild(b1);
-        if (vol) { const b2 = document.createElement("span"); b2.className = "month-badge"; b2.style.background = "#10b981"; b2.innerHTML = `<span>Volum.</span><span>${vol}</span>`; badges.appendChild(b2); }
-        const objc = dayList.filter(e => e.cat === "objecao").length;
-        if (objc) { const b3 = document.createElement("span"); b3.className = "month-badge"; b3.style.background = "#f59e0b"; b3.innerHTML = `<span>Objeç.</span><span>${objc}</span>`; badges.appendChild(b3); }
+      const cell = divEl("month-cell" + (cur.getMonth() !== month ? " dim" : "") + (ds === todayStr() ? " today" : ""));
+      cell.appendChild(divEl("month-day-num", cur.getDate()));
+      const list = eventsOn(ds);
+      if (list.length) {
+        const badges = divEl("month-badges");
+        const mk = (lbl, val, color) => { const b = divEl("month-badge"); b.style.background = color; b.innerHTML = `<span>${lbl}</span><span>${val}</span>`; return b; };
+        badges.appendChild(mk("Ativid.", list.length, "#0ea5e9"));
+        const vol = list.reduce((s, e) => s + (Number(e.volume) || 0), 0);
+        if (vol) badges.appendChild(mk("Volum.", vol, "#10b981"));
+        const done = list.filter(e => e.done).length;
+        if (done) badges.appendChild(mk("Concl.", done, "#22c55e"));
         cell.appendChild(badges);
       }
       const dsCopy = ds;
@@ -541,24 +656,27 @@
       grid.appendChild(cell);
       cur.setDate(cur.getDate() + 1);
     }
-    wrap.appendChild(grid);
+    host.appendChild(grid);
   }
 
-  function cellDiv(cls, txt) { const c = document.createElement("div"); c.className = cls; c.textContent = txt; return c; }
-
   // ---------- Modal CRUD ----------
-  function openModal(event, date, hour) {
+  function openModal(event, preset) {
+    preset = preset || {};
     el("modalTitle").textContent = event ? "Editar atividade" : "Nova atividade";
     el("evId").value = event ? event.id : "";
-    el("evDate").value = event ? event.date : (date || currentDate);
-    el("evHour").value = event ? event.hour : (hour != null ? hour : prefs.startHour);
+    el("evDate").value = event ? event.date : (preset.date || currentDate);
+    el("evStart").value = event ? (event.start || minToHM(startMinOf(event))) : (preset.start || pad(prefs.startHour) + ":00");
+    el("evEnd").value = event ? (event.end || "") : "";
     el("evCat").value = event ? event.cat : "movimento";
     el("evTitle").value = event ? (event.title || "") : "";
     el("evOwner").value = event ? (event.owner || "") : (prefs.teamFilter || "");
+    el("evOwnerPick").value = "";
     el("evVolume").value = event ? (event.volume || "") : "";
     el("evPitch").value = event ? (event.pitch || "") : "";
     el("evObjections").value = event ? (event.objections || "") : "";
     el("evNotes").value = event ? (event.notes || "") : "";
+    el("evDone").checked = event ? !!event.done : false;
+    el("evSummaryOnly").checked = event ? !!event.summaryOnly : false;
     el("btnDelete").style.display = event ? "" : "none";
     el("overlay").classList.add("open");
     el("evTitle").focus();
@@ -569,7 +687,8 @@
     const data = {
       id: el("evId").value || uid(),
       date: el("evDate").value,
-      hour: Number(el("evHour").value),
+      start: el("evStart").value,
+      end: el("evEnd").value,
       cat: el("evCat").value,
       title: el("evTitle").value.trim(),
       owner: el("evOwner").value.trim(),
@@ -577,9 +696,14 @@
       pitch: el("evPitch").value.trim(),
       objections: el("evObjections").value.trim(),
       notes: el("evNotes").value.trim(),
+      done: el("evDone").checked,
+      summaryOnly: el("evSummaryOnly").checked,
     };
     if (!data.date) { alert("Informe a data."); return; }
+    if (!data.start) { alert("Informe o horário de início."); return; }
+    if (data.end && toMin(data.end) <= toMin(data.start)) { alert("O fim deve ser depois do início."); return; }
     if (!data.title) { alert("Informe um título para a atividade."); return; }
+    data.hour = Number(data.start.split(":")[0]);
     try {
       if (el("evId").value) await persistUpdate(data); else await persistCreate(data);
       closeModal(); await loadEvents(); render(); toast("Atividade salva.");
@@ -593,16 +717,55 @@
     catch (e) { alert("Erro ao excluir: " + e.message); }
   }
 
+  // ---------- Pitches padrão ----------
+  let pitchTab = STANDARD_PITCHES[0] ? STANDARD_PITCHES[0].id : null;
+  function openPitches() { renderPitches(); el("pitchOverlay").classList.add("open"); }
+  function closePitches() { el("pitchOverlay").classList.remove("open"); }
+  function renderPitches() {
+    const tabs = el("pitchTabs"); tabs.innerHTML = "";
+    STANDARD_PITCHES.forEach(p => {
+      const b = document.createElement("button");
+      b.className = "pitch-tab" + (p.id === pitchTab ? " active" : "");
+      b.textContent = p.title;
+      b.onclick = () => { pitchTab = p.id; renderPitches(); };
+      tabs.appendChild(b);
+    });
+    const p = STANDARD_PITCHES.find(x => x.id === pitchTab) || STANDARD_PITCHES[0];
+    const c = el("pitchContent");
+    if (!p) { c.innerHTML = "<p>Nenhum pitch cadastrado.</p>"; return; }
+    let html = '<div class="pp-rules">';
+    p.rules.forEach(r => { html += `<div class="pp-rule ${r.type}"><div class="lbl">${escapeHtml(r.label)}</div><div>${escapeHtml(r.text)}</div></div>`; });
+    html += "</div>";
+    html += '<div class="pp-section-label">Ordem de execução</div><div class="pp-order">';
+    p.order.forEach((o, i) => { html += `<div class="step"><b>${i + 1}</b>${escapeHtml(o)}</div>`; });
+    html += "</div>";
+    html += '<div class="pp-section-label">Pitches por cenário</div>';
+    p.pitches.forEach((pt, i) => {
+      html += `<div class="pp-pitch"><div class="ph"><span>${escapeHtml(pt.header)}</span>` +
+        `<button data-copy="${i}" class="ghost" style="font-size:11px;padding:4px 8px">Copiar</button></div>` +
+        `<div class="pb">"${escapeHtml(pt.body)}"</div></div>`;
+    });
+    html += '<div class="pp-section-label">Checklist do analista</div><ul class="pp-check">';
+    p.checklist.forEach(it => { html += `<li>☐ ${escapeHtml(it)}</li>`; });
+    html += "</ul>";
+    c.innerHTML = html;
+    c.querySelectorAll("[data-copy]").forEach(btn => {
+      btn.onclick = () => {
+        const txt = p.pitches[Number(btn.dataset.copy)].body;
+        navigator.clipboard.writeText(txt).then(() => { const o = btn.textContent; btn.textContent = "Copiado ✓"; setTimeout(() => btn.textContent = o, 1200); });
+      };
+    });
+  }
+
   // ---------- Navegação ----------
-  function setDate(s) { currentDate = s; el("datePicker").value = s; el("currentDateLabel").textContent = fmtLong(s); el("weekdayLabel").textContent = fmtWeekday(s); refresh(); }
+  function setDate(s) { currentDate = s; refresh(); }
   function navStep(dir) {
     if (view === "day") currentDate = shiftDate(currentDate, dir);
     else if (view === "week") currentDate = shiftDate(currentDate, dir * 7);
     else { const d = parseDate(currentDate); d.setMonth(d.getMonth() + dir); currentDate = toStr(d); }
-    setDate(currentDate);
+    refresh();
   }
   function setView(v) { view = v; document.querySelectorAll("#viewSwitch button").forEach(b => b.classList.toggle("active", b.dataset.view === v)); refresh(); }
-
   async function refresh() {
     el("datePicker").value = currentDate;
     el("currentDateLabel").textContent = fmtLong(currentDate);
@@ -622,7 +785,6 @@
     reader.onload = async () => {
       try {
         let data = JSON.parse(reader.result);
-        // aceita tanto array novo quanto formato antigo { "YYYY-MM-DD": [...] }
         if (!Array.isArray(data)) {
           const flat = []; Object.keys(data).forEach(date => (data[date] || []).forEach(e => flat.push(Object.assign({ date }, e)))); data = flat;
         }
@@ -643,30 +805,39 @@
   function toast(msg) { const t = el("toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 2200); }
 
   // ---------- Init ----------
-  async function init() {
-    const catSel = el("evCat");
-    CATEGORIES.forEach(c => { const o = document.createElement("option"); o.value = c.id; o.textContent = c.label; catSel.appendChild(o); });
-    fillHourSelect(el("evHour"), prefs.startHour);
+  function init() {
+    CATEGORIES.forEach(c => { const o = document.createElement("option"); o.value = c.id; o.textContent = c.label; el("evCat").appendChild(o); });
+    // responsáveis (optgroups)
+    ROSTER.forEach(g => {
+      const og = document.createElement("optgroup"); og.label = g.group;
+      g.names.forEach(n => { const o = document.createElement("option"); o.value = n; o.textContent = n; og.appendChild(o); });
+      el("evOwnerPick").appendChild(og);
+    });
+    el("evOwnerPick").onchange = () => { if (el("evOwnerPick").value) el("evOwner").value = el("evOwnerPick").value; };
+
     fillHourSelect(el("startHour"), prefs.startHour);
     fillHourSelect(el("endHour"), prefs.endHour);
-
     el("startHour").onchange = () => { prefs.startHour = Number(el("startHour").value); savePrefs(); render(); };
-    el("endHour").onchange   = () => { prefs.endHour   = Number(el("endHour").value);   savePrefs(); render(); };
+    el("endHour").onchange = () => { prefs.endHour = Number(el("endHour").value); savePrefs(); render(); };
 
     el("btnPrev").onclick = () => navStep(-1);
     el("btnNext").onclick = () => navStep(1);
     el("btnToday").onclick = () => setDate(todayStr());
     el("datePicker").onchange = () => setDate(el("datePicker").value);
-
     document.querySelectorAll("#viewSwitch button").forEach(b => b.onclick = () => setView(b.dataset.view));
 
-    el("btnNew").onclick = () => openModal(null, currentDate, prefs.startHour);
+    el("btnNew").onclick = () => openModal(null, { date: currentDate, start: pad(prefs.startHour) + ":00" });
     el("btnCloseModal").onclick = closeModal;
     el("btnCancel").onclick = closeModal;
     el("btnSave").onclick = saveEvent;
     el("btnDelete").onclick = deleteEvent;
     el("overlay").onclick = (e) => { if (e.target === el("overlay")) closeModal(); };
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+    el("btnPitches").onclick = openPitches;
+    el("closePitch").onclick = closePitches;
+    el("pitchOverlay").onclick = (e) => { if (e.target === el("pitchOverlay")) closePitches(); };
+
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closePitches(); } });
 
     el("teamFilter").onchange = () => { prefs.teamFilter = el("teamFilter").value; savePrefs(); render(); };
     el("btnExport").onclick = exportData;
@@ -674,9 +845,7 @@
     el("fileImport").onchange = (e) => { if (e.target.files[0]) importData(e.target.files[0]); e.target.value = ""; };
 
     renderFilters();
-    await checkHealth();
-    setDate(currentDate);
-    // Revalida conexão periodicamente para reconectar ao servidor
+    checkHealth().then(() => setDate(currentDate));
     setInterval(checkHealth, 30000);
   }
 
