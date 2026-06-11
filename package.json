@@ -1,0 +1,14 @@
+{
+  "name": "calendario-cobranca",
+  "version": "1.0.0",
+  "description": "Calendário interativo do movimento hora a hora da equipe de cobrança",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "license": "MIT"
+}
