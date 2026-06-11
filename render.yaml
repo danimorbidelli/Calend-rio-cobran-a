@@ -13,7 +13,7 @@ databases:
 
 services:
   - type: web
-    name: calendario-cobranca
+    name: calendario-cobranca-idealtrends
     runtime: node
     plan: free
     buildCommand: npm install
