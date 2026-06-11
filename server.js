@@ -10,6 +10,7 @@
  */
 
 const express = require("express");
+const fs = require("fs");
 const path = require("path");
 const { createStore } = require("./storage");
 
@@ -96,7 +97,25 @@ app.post("/api/import", wrap(async (req, res) => {
 
 app.get("/api/health", (req, res) => res.json({ ok: true, storage: store.label }));
 
+// Semeia o calendário com o rascunho (seed.json) na primeira execução, quando
+// o armazenamento está vazio. Idempotente: ids determinísticos + ON CONFLICT.
+// Desative definindo SEED=off.
+async function seedIfEmpty() {
+  if (process.env.SEED === "off") return;
+  const seedPath = path.join(__dirname, "seed.json");
+  if (!fs.existsSync(seedPath)) return;
+  const existing = await store.list({});
+  if (existing.length > 0) return;
+  let seed;
+  try { seed = JSON.parse(fs.readFileSync(seedPath, "utf8")); } catch (e) { return; }
+  if (!Array.isArray(seed) || seed.length === 0) return;
+  const stamped = seed.map((e) => ({ ...e, updatedAt: new Date().toISOString() }));
+  const total = await store.bulk(stamped, "merge");
+  console.log(`Seed aplicado: ${total} atividades importadas do rascunho.`);
+}
+
 store.init()
+  .then(seedIfEmpty)
   .then(() => {
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`Calendário de Cobrança rodando na porta ${PORT} — armazenamento: ${store.label}`);
