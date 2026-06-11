@@ -6,7 +6,7 @@
     "cat": "volumetria",
     "title": "E-mail automático para 100% da base (F1-F4)",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[11/06 (qui) — D1, abertura + notificação extrajudicial]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · 100% notif. extrajudicial paralela.\n\nE-mail automático para 100% da base (F1-F4): extrato consolidado, valor total em aberto, sem desconto."
@@ -18,7 +18,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático: mesma mensagem + simulação de parcelamento até 3x — 100% da base."
@@ -30,7 +30,7 @@
     "cat": "outro",
     "title": "Disparo paralelo — notificação extrajudicial",
     "owner": "",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "Disparo paralelo — notificação extrajudicial: e-mail formal (carta com AR para F1/F2) para 100% da base, em paralelo ao disparo comercial."
@@ -42,7 +42,7 @@
     "cat": "outro",
     "title": "WhatsApp com a notificação extrajudicial (resumo + link do documento)",
     "owner": "",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp com a notificação extrajudicial (resumo + link do documento) — 100% da base, mensagem separada."
@@ -54,7 +54,7 @@
     "cat": "movimento",
     "title": "(9h20-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "Bom dia, [Nome]? Aqui é [analista] da [empresa]. Vi que você tem [N] faturas em aberto, totalizando R$ XXX. Você também recebeu uma notificação formal sobre essa pendência. O que faz mais sentido pra resolver agora — Pix à vista ou parcelar em até 3x no cartão?",
     "objections": "",
     "notes": "Bloco 1 — F1 + F3: ligação para 100% de F1, priorizando clientes em renegociação (histórico de quebra de acordo, tom de retomada de compromisso). Em seguida F3 completo. Tentativa única, máx 3 toques."
@@ -90,7 +90,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp (10-15s) para F1/F3 não atendidos no Bloco 1.",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp (10-15s) para F1/F3 não atendidos no Bloco 1."
@@ -102,7 +102,7 @@
     "cat": "movimento",
     "title": "(13h15-16h00) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: ligação para 100% de F2, priorizando renegociações, depois F4 completo. Pitch de diagnóstico (~30s para F2, ~20-25s para F4)."
@@ -150,7 +150,7 @@
     "cat": "volumetria",
     "title": "E-mail automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[12/06 (sex) — D2, todas as faixas + reforço notificação]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · 100% reforço notif. extrajudicial.\n\nE-mail automático: saldo atualizado para 100% da base (descontando pagamentos de ontem)."
@@ -162,7 +162,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático: reforço da simulação de parcelamento até 3x — 100% da base."
@@ -186,7 +186,7 @@
     "cat": "movimento",
     "title": "(9h20-12h00) Bloco 1 — F2 + F4 (faixas que ficaram para a tarde ontem)",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "[Nome], aqui é [analista]. Você tem [N] faturas em aberto somando R$ XXX, e recebeu também uma notificação sobre isso. Posso te ajudar a resolver agora — Pix à vista ou parcelar em até 3x no cartão. O que prefere?",
     "objections": "",
     "notes": "Bloco 1 — F2 + F4 (faixas que ficaram para a tarde ontem): ligação para 100% de F2, priorizando renegociações com tom de retomada, depois F4 completo. Pitch de diagnóstico (~30s)."
@@ -222,7 +222,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp (10-15s) para F2/F4 não atendidos no Bloco 1.",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp (10-15s) para F2/F4 não atendidos no Bloco 1."
@@ -234,7 +234,7 @@
     "cat": "movimento",
     "title": "(13h15-16h00) Bloco 2 — F1 + F3 (2ª passada do dia)",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F1 + F3 (2ª passada do dia): retomada de não atendidos de ontem em F1, depois F3 completo."
@@ -258,7 +258,7 @@
     "cat": "movimento",
     "title": "(16h15-17h45) Bloco extra — todas as faixas",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "Bloco extra — todas as faixas: fechamento de 'engajados sem conclusão' do dia, priorizando renegociações remanescentes."
@@ -294,7 +294,7 @@
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4)",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[13/06 (sáb) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4): confirmação de promessas de sexta + reforço silencioso de saldo."
@@ -318,7 +318,7 @@
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base (F1-F4)",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[14/06 (dom) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base (F1-F4): extrato atualizado (mantém cobertura diária ≥100%)."
@@ -342,7 +342,7 @@
     "cat": "volumetria",
     "title": "E-mail automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[15/06 (seg) — D3, retomada geral por faixa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
@@ -354,7 +354,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático: 100% da base, reforço de opções (Pix, até 3x)."
@@ -366,7 +366,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 1 — F1 + F3: 2ª tentativa para não atendidos de sexta. Renegociações recebem reforço de 'retomada de compromisso'."
@@ -402,7 +402,7 @@
     "cat": "volumetria",
     "title": "WhatsApp segmentado",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp segmentado: confirmação de promessas vencidas hoje (F1-F4)."
@@ -414,7 +414,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4 não atendidos na sexta",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 não atendidos na sexta — 2ª tentativa via canal automático."
@@ -426,7 +426,7 @@
     "cat": "movimento",
     "title": "(13h30-16h00) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: 2ª tentativa humana (ligação + áudio = ~100% cobertura combinada). Renegociação prioritária mantida."
@@ -474,7 +474,7 @@
     "cat": "volumetria",
     "title": "E-mail automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[16/06 (ter) — D4, obstáculo + renegociação ativa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
@@ -486,7 +486,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático: 100% da base, reforço de opções."
@@ -498,7 +498,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3 zero-resposta",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
     "notes": "Bloco 1 — F1 + F3 zero-resposta: pergunta de obstáculo ('o que está impedindo de resolver isso até agora?'). Para renegociações, pergunta adicional: 'o que impediu o cumprimento do acordo anterior?'."
@@ -534,7 +534,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 — 3ª tentativa via canal automático."
@@ -546,7 +546,7 @@
     "cat": "movimento",
     "title": "(13h15-16h00) Bloco 2 — F2 + F4 engajados sem conclusão + maiores valores remanescent…",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4 engajados sem conclusão + maiores valores remanescentes: fechamento. Renegociação prioritária mantida."
@@ -594,7 +594,7 @@
     "cat": "volumetria",
     "title": "Disparo BLIP (massa via WhatsApp)",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[17/06 (qua) — D5, disparo BLIP + canal alternativo]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos · 100% BLIP às 9h.\n\nDisparo BLIP (massa via WhatsApp): mensagem padronizada para 100% da base (F1-F4) reforçando notificação extrajudicial + opções de pagamento. Disparo único, automatizado — conta como 1 acionamento por cliente."
@@ -606,7 +606,7 @@
     "cat": "volumetria",
     "title": "E-mail automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "E-mail automático: saldo atualizado para 100% da base."
@@ -618,7 +618,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
     "notes": "Bloco 1 — F1 + F3: para 'zero resposta', ligação com pergunta de obstáculo. Classifica: falta de dinheiro / esquecimento / insatisfação / outro."
@@ -654,7 +654,7 @@
     "cat": "volumetria",
     "title": "Para F1/F3 ainda sem resposta",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "",
     "notes": "Para F1/F3 ainda sem resposta: WhatsApp formal em texto (canal alternativo)."
@@ -666,7 +666,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp automático para F2/F4 não respondidos ao disparo BLIP",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp automático para F2/F4 não respondidos ao disparo BLIP — 2º toque do dia nestas faixas."
@@ -678,7 +678,7 @@
     "cat": "movimento",
     "title": "(13h30-16h00) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: ligação humana para maiores valores remanescentes + 'engajados sem conclusão'. Renegociação prioritária mantida."
@@ -726,7 +726,7 @@
     "cat": "volumetria",
     "title": "E-mail automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[18/06 (qui) — D6, pico de cadência geral]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos · até 3x cartão.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
@@ -738,7 +738,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático: 100% da base, reforço das opções — sem prazo, sem desconto."
@@ -750,7 +750,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "[Nome], aqui é [analista] de novo. Sua situação está em [N] faturas em aberto, totalizando R$ XXX. Posso te ajudar a resolver hoje — Pix à vista ou parcelamento até 3x no cartão. O que prefere?",
     "objections": "",
     "notes": "Bloco 1 — F1 + F3: maior volume da semana, toda a fila restante destas faixas (ligação completa, ~30-40s). Renegociações ainda em aberto recebem prioridade de fechamento."
@@ -786,7 +786,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
@@ -798,7 +798,7 @@
     "cat": "movimento",
     "title": "(13h15-15h45) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: toda a fila restante destas faixas (ligação direta, ~20-25s). Renegociações com prioridade."
@@ -822,7 +822,7 @@
     "cat": "movimento",
     "title": "(16h15-17h45) Bloco extra — todas as faixas",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "Bloco extra — todas as faixas: 2ª rodada para 'engajados sem conclusão' do dia — fechamento."
@@ -846,7 +846,7 @@
     "cat": "volumetria",
     "title": "E-mail automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[19/06 (sex) — D7, confirmação + sustentação]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
@@ -858,7 +858,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático: 100% da base, confirmação de promessas com vencimento neste fim de semana ou segunda."
@@ -870,7 +870,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 1 — F1 + F3: 2ª tentativa para não atendidos de ontem (horário invertido). Renegociação prioritária mantida."
@@ -906,7 +906,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
@@ -918,7 +918,7 @@
     "cat": "movimento",
     "title": "(13h30-16h00) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: continuação da fila — fechar a semana com máximo de promessas confirmadas. Renegociação prioritária mantida."
@@ -966,7 +966,7 @@
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base (F1-F4)",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[20/06 (sáb) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base (F1-F4): extrato consolidado para quem tem promessa vencendo hoje ou amanhã — lembrete, sem cobrança nova."
@@ -978,7 +978,7 @@
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base (F1-F4)",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[21/06 (dom) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base (F1-F4): extrato atualizado (mantém cobertura diária)."
@@ -1002,7 +1002,7 @@
     "cat": "volumetria",
     "title": "E-mail automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[22/06 (seg) — D8, retomada pós-semana por faixa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4), descontando pagamentos do fim de semana."
@@ -1014,7 +1014,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático: 100% da base."
@@ -1026,7 +1026,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 1 — F1 + F3: cobrar promessas vencidas no fim de semana não cumpridas — tom de retomada. Renegociações recebem reforço de que esta é a 2ª chance dentro do ciclo."
@@ -1062,7 +1062,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
@@ -1074,7 +1074,7 @@
     "cat": "movimento",
     "title": "(13h15-16h00) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: continuação da fila, priorizada por valor + dias de atraso. Renegociação prioritária mantida."
@@ -1122,7 +1122,7 @@
     "cat": "volumetria",
     "title": "E-mail automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[23/06 (ter) — D9, cadência alta por faixa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
@@ -1134,7 +1134,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático: 100% da base."
@@ -1146,7 +1146,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 1 — F1 + F3: continuação da fila — toda esta faixa recebe ao menos 1 toque na semana."
@@ -1182,7 +1182,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
@@ -1194,7 +1194,7 @@
     "cat": "movimento",
     "title": "(13h15-16h00) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: continuação."
@@ -1242,7 +1242,7 @@
     "cat": "volumetria",
     "title": "E-mail automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[24/06 (qua) — D10, intensificação pré-pico]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
@@ -1254,7 +1254,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático: 100% da base — reforço de opções antes do pico de amanhã."
@@ -1266,7 +1266,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 1 — F1 + F3: continuação da fila ativa (engajados, promessas, valores altos sem fechamento, renegociações ainda abertas)."
@@ -1302,7 +1302,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
@@ -1314,7 +1314,7 @@
     "cat": "movimento",
     "title": "(13h15-16h00) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: continuação da fila ativa."
@@ -1362,7 +1362,7 @@
     "cat": "volumetria",
     "title": "E-mail",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[25/06 (qui) — D11, pico máximo do ciclo]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos · até 3x cartão.\n\nE-mail: extrato final do ciclo — valor total, opções (Pix, até 3x) para 100% da base (F1-F4). Sem prazo artificial — 'situação atual antes da próxima etapa'."
@@ -1374,7 +1374,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático com a mesma mensagem do e-mail",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático com a mesma mensagem do e-mail — 100% da base."
@@ -1386,7 +1386,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "[Nome], é o [analista] de novo. Antes de mudarmos pra próxima etapa do processo, queria fechar isso com você hoje — Pix à vista ou parcelamento até 3x no cartão. Topa resolver agora? Te mando o link na hora.",
     "objections": "",
     "notes": "Bloco 1 — F1 + F3: maior volume do ciclo para estas faixas — toda a carteira remanescente recebe contato. Pitch direto (~30s), foco em fechar antes da virada. Renegociações remanescentes têm prioridade absoluta."
@@ -1422,7 +1422,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
@@ -1434,7 +1434,7 @@
     "cat": "movimento",
     "title": "(13h15-15h45) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: maior volume do ciclo para estas faixas."
@@ -1458,7 +1458,7 @@
     "cat": "movimento",
     "title": "(16h15-17h45) Bloco extra — todas as faixas",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "Bloco extra — todas as faixas: fechamento para 'engajados sem conclusão' do dia."
@@ -1494,7 +1494,7 @@
     "cat": "volumetria",
     "title": "E-mail",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[26/06 (sex) — D12, resgate final por faixa]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos.\n\nE-mail: aviso de que a próxima semana muda o fluxo de atendimento para casos sem regularização — 100% da base (F1-F4)."
@@ -1506,7 +1506,7 @@
     "cat": "volumetria",
     "title": "WhatsApp automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp automático: mesmo aviso — 100% da base."
@@ -1518,7 +1518,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 1 — F1 + F3: resgate de quem 'engajou sem conclusão' ontem. Foco total em fechamento, com atenção redobrada às renegociações (vão para o crônico com histórico de quebra dupla se não fecharem)."
@@ -1554,7 +1554,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4 não respondidos",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 não respondidos — última cobertura automática do ciclo."
@@ -1566,7 +1566,7 @@
     "cat": "movimento",
     "title": "(13h15-16h00) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: resgate dos demais 'engajados sem conclusão' da semana."
@@ -1614,7 +1614,7 @@
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4)",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[27/06 (sáb) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4): extrato final + aviso de virada de fluxo na segunda."
@@ -1626,7 +1626,7 @@
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4)",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[28/06 (dom) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4): confirmações de pagamentos do fim de semana."
@@ -1638,7 +1638,7 @@
     "cat": "volumetria",
     "title": "Disparo automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[29/06 (seg) — virada para crônico, reforço de notificação]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · até 3x cartão.\n\nDisparo automático: reforço da notificação extrajudicial (e-mail + carta com AR para casos acima do ponto de corte) para 100% dos casos sem regularização desde 11/06 (F1-F4)."
@@ -1650,7 +1650,7 @@
     "cat": "volumetria",
     "title": "WhatsApp com link de autoatendimento",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "WhatsApp com link de autoatendimento — simulador de acordo (Pix à vista ou até 3x) + assinatura digital — 100% da base remanescente."
@@ -1662,7 +1662,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3 sem regularização",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
     "notes": "Bloco 1 — F1 + F3 sem regularização: ligação completa, organizada por valor e classificação de obstáculo. Clientes com quebra dupla (já quebraram antes e não responderam neste ciclo) recebem proposta com exigência de garantia adicional (cartão como meio de pagamento, não boleto)."
@@ -1698,7 +1698,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 — reforço do link de autoatendimento."
@@ -1710,7 +1710,7 @@
     "cat": "movimento",
     "title": "(13h15-16h00) Bloco 2 — F2 + F4 sem regularização",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
     "notes": "Bloco 2 — F2 + F4 sem regularização: ligação direta, com proposta de até 3x já personalizada pela classificação de obstáculo. Quebra dupla segue exigência de garantia adicional."
@@ -1758,7 +1758,7 @@
     "cat": "volumetria",
     "title": "E-mail automático",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "",
     "notes": "[30/06 (ter) — D2 crônico, negociação ativa]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · ~8-10% meta formalização.\n\nE-mail automático: reforço do prazo de resposta da notificação extrajudicial — 100% da base remanescente (F1-F4)."
@@ -1770,7 +1770,7 @@
     "cat": "volumetria",
     "title": "WhatsApp reforçando o link de autoatendimento, segmentado pela classifi…",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 598,
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
     "notes": "WhatsApp reforçando o link de autoatendimento, segmentado pela classificação de obstáculo — 100% da base."
@@ -1782,7 +1782,7 @@
     "cat": "movimento",
     "title": "(9h15-12h00) Bloco 1 — F1 + F3",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 280,
     "pitch": "[Nome], tudo bem? Você recebeu nossa notificação — tem um link onde você mesmo simula o acordo (à vista ou em até 3x no cartão) e assina digital, sem precisar conversar com ninguém. Mas posso já te passar as opções agora também. O que faz mais sentido?",
     "objections": "",
     "notes": "Bloco 1 — F1 + F3: prioridade para quem abriu o link sem concluir (até 3 toques) — fechamento assistido."
@@ -1818,7 +1818,7 @@
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
     "owner": "Sistema",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Áudio WhatsApp para F2/F4 — reforço final do ciclo."
@@ -1830,7 +1830,7 @@
     "cat": "movimento",
     "title": "(13h15-16h00) Bloco 2 — F2 + F4",
     "owner": "Equipe",
-    "volume": "",
+    "volume": 318,
     "pitch": "",
     "objections": "",
     "notes": "Bloco 2 — F2 + F4: maiores valores sem resposta à notificação — pitch completo, teto até 3x no cartão e pergunta sobre terceiro disponível."
