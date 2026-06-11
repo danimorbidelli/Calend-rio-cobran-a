@@ -2,6 +2,8 @@
   {
     "id": "seed-2026-06-11-0",
     "date": "2026-06-11",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático para 100% da base (F1-F4)",
@@ -9,11 +11,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[11/06 (qui) — D1, abertura + notificação extrajudicial]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · 100% notif. extrajudicial paralela.\n\nE-mail automático para 100% da base (F1-F4): extrato consolidado, valor total em aberto, sem desconto."
+    "notes": "[11/06 (qui) — D1, abertura + notificação extrajudicial]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · 100% notif. extrajudicial paralela.\n\nE-mail automático para 100% da base (F1-F4): extrato consolidado, valor total em aberto, sem desconto.",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-1",
     "date": "2026-06-11",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático",
@@ -21,11 +26,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático: mesma mensagem + simulação de parcelamento até 3x — 100% da base."
+    "notes": "WhatsApp automático: mesma mensagem + simulação de parcelamento até 3x — 100% da base.",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-2",
     "date": "2026-06-11",
+    "start": "09:10",
+    "end": "",
     "hour": 9,
     "cat": "outro",
     "title": "Disparo paralelo — notificação extrajudicial",
@@ -33,11 +41,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "Disparo paralelo — notificação extrajudicial: e-mail formal (carta com AR para F1/F2) para 100% da base, em paralelo ao disparo comercial."
+    "notes": "Disparo paralelo — notificação extrajudicial: e-mail formal (carta com AR para F1/F2) para 100% da base, em paralelo ao disparo comercial.",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-3",
     "date": "2026-06-11",
+    "start": "09:15",
+    "end": "",
     "hour": 9,
     "cat": "outro",
     "title": "WhatsApp com a notificação extrajudicial (resumo + link do documento)",
@@ -45,23 +56,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp com a notificação extrajudicial (resumo + link do documento) — 100% da base, mensagem separada."
+    "notes": "WhatsApp com a notificação extrajudicial (resumo + link do documento) — 100% da base, mensagem separada.",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-4",
     "date": "2026-06-11",
+    "start": "09:20",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h20-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "Bom dia, [Nome]? Aqui é [analista] da [empresa]. Vi que você tem [N] faturas em aberto, totalizando R$ XXX. Você também recebeu uma notificação formal sobre essa pendência. O que faz mais sentido pra resolver agora — Pix à vista ou parcelar em até 3x no cartão?",
     "objections": "",
-    "notes": "Bloco 1 — F1 + F3: ligação para 100% de F1, priorizando clientes em renegociação (histórico de quebra de acordo, tom de retomada de compromisso). Em seguida F3 completo. Tentativa única, máx 3 toques."
+    "notes": "Bloco 1 — F1 + F3: ligação para 100% de F1, priorizando clientes em renegociação (histórico de quebra de acordo, tom de retomada de compromisso). Em seguida F3 completo. Tentativa única, máx 3 toques.",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-5",
     "date": "2026-06-11",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -69,23 +86,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-6",
     "date": "2026-06-11",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-7",
     "date": "2026-06-11",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp (10-15s) para F1/F3 não atendidos no Bloco 1.",
@@ -93,23 +116,29 @@
     "volume": 280,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp (10-15s) para F1/F3 não atendidos no Bloco 1."
+    "notes": "Áudio WhatsApp (10-15s) para F1/F3 não atendidos no Bloco 1.",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-8",
     "date": "2026-06-11",
+    "start": "13:15",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-16h00) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: ligação para 100% de F2, priorizando renegociações, depois F4 completo. Pitch de diagnóstico (~30s para F2, ~20-25s para F4)."
+    "notes": "Bloco 2 — F2 + F4: ligação para 100% de F2, priorizando renegociações, depois F4 completo. Pitch de diagnóstico (~30s para F2, ~20-25s para F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-9",
     "date": "2026-06-11",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -117,11 +146,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com clientes que fecharam acordo ou prometeram pagamento hoje, reforçando o compromisso assumido para reduzir risco de quebra."
+    "notes": "Ação preventiva — contato com clientes que fecharam acordo ou prometeram pagamento hoje, reforçando o compromisso assumido para reduzir risco de quebra.",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-10",
     "date": "2026-06-11",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Tagueamento de todas as faixas",
@@ -129,11 +161,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Tagueamento de todas as faixas: atendeu+pagou / atendeu+prometeu / atendeu+recusou / não atendeu / engajou sem contato."
+    "notes": "Tagueamento de todas as faixas: atendeu+pagou / atendeu+prometeu / atendeu+recusou / não atendeu / engajou sem contato.",
+    "done": false
   },
   {
     "id": "seed-2026-06-11-11",
     "date": "2026-06-11",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -141,11 +176,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-0",
     "date": "2026-06-12",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático",
@@ -153,11 +191,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[12/06 (sex) — D2, todas as faixas + reforço notificação]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · 100% reforço notif. extrajudicial.\n\nE-mail automático: saldo atualizado para 100% da base (descontando pagamentos de ontem)."
+    "notes": "[12/06 (sex) — D2, todas as faixas + reforço notificação]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · 100% reforço notif. extrajudicial.\n\nE-mail automático: saldo atualizado para 100% da base (descontando pagamentos de ontem).",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-1",
     "date": "2026-06-12",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático",
@@ -165,11 +206,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático: reforço da simulação de parcelamento até 3x — 100% da base."
+    "notes": "WhatsApp automático: reforço da simulação de parcelamento até 3x — 100% da base.",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-2",
     "date": "2026-06-12",
+    "start": "09:10",
+    "end": "",
     "hour": 9,
     "cat": "outro",
     "title": "2º disparo da notificação extrajudicial (reforço)",
@@ -177,23 +221,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "2º disparo da notificação extrajudicial (reforço): e-mail + WhatsApp para quem não abriu ontem, em horário diferente."
+    "notes": "2º disparo da notificação extrajudicial (reforço): e-mail + WhatsApp para quem não abriu ontem, em horário diferente.",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-3",
     "date": "2026-06-12",
+    "start": "09:20",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h20-12h00) Bloco 1 — F2 + F4 (faixas que ficaram para a tarde ontem)",
+    "title": "Bloco 1 — F2 + F4 (faixas que ficaram para a tarde ontem)",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "[Nome], aqui é [analista]. Você tem [N] faturas em aberto somando R$ XXX, e recebeu também uma notificação sobre isso. Posso te ajudar a resolver agora — Pix à vista ou parcelar em até 3x no cartão. O que prefere?",
     "objections": "",
-    "notes": "Bloco 1 — F2 + F4 (faixas que ficaram para a tarde ontem): ligação para 100% de F2, priorizando renegociações com tom de retomada, depois F4 completo. Pitch de diagnóstico (~30s)."
+    "notes": "Bloco 1 — F2 + F4 (faixas que ficaram para a tarde ontem): ligação para 100% de F2, priorizando renegociações com tom de retomada, depois F4 completo. Pitch de diagnóstico (~30s).",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-4",
     "date": "2026-06-12",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -201,23 +251,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-5",
     "date": "2026-06-12",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-6",
     "date": "2026-06-12",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp (10-15s) para F2/F4 não atendidos no Bloco 1.",
@@ -225,23 +281,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp (10-15s) para F2/F4 não atendidos no Bloco 1."
+    "notes": "Áudio WhatsApp (10-15s) para F2/F4 não atendidos no Bloco 1.",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-7",
     "date": "2026-06-12",
+    "start": "13:15",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-16h00) Bloco 2 — F1 + F3 (2ª passada do dia)",
+    "title": "Bloco 2 — F1 + F3 (2ª passada do dia)",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F1 + F3 (2ª passada do dia): retomada de não atendidos de ontem em F1, depois F3 completo."
+    "notes": "Bloco 2 — F1 + F3 (2ª passada do dia): retomada de não atendidos de ontem em F1, depois F3 completo.",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-8",
     "date": "2026-06-12",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -249,23 +311,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com clientes que fecharam acordo ou prometeram pagamento hoje, reforçando o compromisso assumido para reduzir risco de quebra."
+    "notes": "Ação preventiva — contato com clientes que fecharam acordo ou prometeram pagamento hoje, reforçando o compromisso assumido para reduzir risco de quebra.",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-9",
     "date": "2026-06-12",
+    "start": "16:15",
+    "end": "17:45",
     "hour": 16,
     "cat": "movimento",
-    "title": "(16h15-17h45) Bloco extra — todas as faixas",
+    "title": "Bloco extra — todas as faixas",
     "owner": "Equipe",
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco extra — todas as faixas: fechamento de 'engajados sem conclusão' do dia, priorizando renegociações remanescentes."
+    "notes": "Bloco extra — todas as faixas: fechamento de 'engajados sem conclusão' do dia, priorizando renegociações remanescentes.",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-10",
     "date": "2026-06-12",
+    "start": "17:45",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Tagueamento completo de todas as faixas.",
@@ -273,11 +341,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Tagueamento completo de todas as faixas."
+    "notes": "Tagueamento completo de todas as faixas.",
+    "done": false
   },
   {
     "id": "seed-2026-06-12-11",
     "date": "2026-06-12",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -285,11 +356,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-13-0",
     "date": "2026-06-13",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4)",
@@ -297,11 +371,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[13/06 (sáb) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4): confirmação de promessas de sexta + reforço silencioso de saldo."
+    "notes": "[13/06 (sáb) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4): confirmação de promessas de sexta + reforço silencioso de saldo.",
+    "done": false
   },
   {
     "id": "seed-2026-06-13-1",
     "date": "2026-06-13",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "outro",
     "title": "Sistema monta fila de segunda",
@@ -309,11 +386,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Sistema monta fila de segunda: todas as faixas, com clientes em renegociação destacados no topo de cada faixa."
+    "notes": "Sistema monta fila de segunda: todas as faixas, com clientes em renegociação destacados no topo de cada faixa.",
+    "done": false
   },
   {
     "id": "seed-2026-06-14-0",
     "date": "2026-06-14",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base (F1-F4)",
@@ -321,11 +401,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[14/06 (dom) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base (F1-F4): extrato atualizado (mantém cobertura diária ≥100%)."
+    "notes": "[14/06 (dom) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base (F1-F4): extrato atualizado (mantém cobertura diária ≥100%).",
+    "done": false
   },
   {
     "id": "seed-2026-06-14-1",
     "date": "2026-06-14",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "outro",
     "title": "Sistema registra pagamentos do fim de semana e atualiza saldos por faix…",
@@ -333,11 +416,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Sistema registra pagamentos do fim de semana e atualiza saldos por faixa."
+    "notes": "Sistema registra pagamentos do fim de semana e atualiza saldos por faixa.",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-0",
     "date": "2026-06-15",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático",
@@ -345,11 +431,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[15/06 (seg) — D3, retomada geral por faixa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
+    "notes": "[15/06 (seg) — D3, retomada geral por faixa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-1",
     "date": "2026-06-15",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático",
@@ -357,23 +446,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático: 100% da base, reforço de opções (Pix, até 3x)."
+    "notes": "WhatsApp automático: 100% da base, reforço de opções (Pix, até 3x).",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-2",
     "date": "2026-06-15",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 1 — F1 + F3: 2ª tentativa para não atendidos de sexta. Renegociações recebem reforço de 'retomada de compromisso'."
+    "notes": "Bloco 1 — F1 + F3: 2ª tentativa para não atendidos de sexta. Renegociações recebem reforço de 'retomada de compromisso'.",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-3",
     "date": "2026-06-15",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -381,23 +476,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-4",
     "date": "2026-06-15",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-5",
     "date": "2026-06-15",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "WhatsApp segmentado",
@@ -405,11 +506,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp segmentado: confirmação de promessas vencidas hoje (F1-F4)."
+    "notes": "WhatsApp segmentado: confirmação de promessas vencidas hoje (F1-F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-6",
     "date": "2026-06-15",
+    "start": "13:15",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4 não atendidos na sexta",
@@ -417,23 +521,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 não atendidos na sexta — 2ª tentativa via canal automático."
+    "notes": "Áudio WhatsApp para F2/F4 não atendidos na sexta — 2ª tentativa via canal automático.",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-7",
     "date": "2026-06-15",
+    "start": "13:30",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h30-16h00) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: 2ª tentativa humana (ligação + áudio = ~100% cobertura combinada). Renegociação prioritária mantida."
+    "notes": "Bloco 2 — F2 + F4: 2ª tentativa humana (ligação + áudio = ~100% cobertura combinada). Renegociação prioritária mantida.",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-8",
     "date": "2026-06-15",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -441,11 +551,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso para reduzir risco de quebra."
+    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso para reduzir risco de quebra.",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-9",
     "date": "2026-06-15",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Atualização de tags por faixa + lista priorizada de terça.",
@@ -453,11 +566,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Atualização de tags por faixa + lista priorizada de terça."
+    "notes": "Atualização de tags por faixa + lista priorizada de terça.",
+    "done": false
   },
   {
     "id": "seed-2026-06-15-10",
     "date": "2026-06-15",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -465,11 +581,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-16-0",
     "date": "2026-06-16",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático",
@@ -477,11 +596,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[16/06 (ter) — D4, obstáculo + renegociação ativa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
+    "notes": "[16/06 (ter) — D4, obstáculo + renegociação ativa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-16-1",
     "date": "2026-06-16",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático",
@@ -489,23 +611,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático: 100% da base, reforço de opções."
+    "notes": "WhatsApp automático: 100% da base, reforço de opções.",
+    "done": false
   },
   {
     "id": "seed-2026-06-16-2",
     "date": "2026-06-16",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3 zero-resposta",
+    "title": "Bloco 1 — F1 + F3 zero-resposta",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
-    "notes": "Bloco 1 — F1 + F3 zero-resposta: pergunta de obstáculo ('o que está impedindo de resolver isso até agora?'). Para renegociações, pergunta adicional: 'o que impediu o cumprimento do acordo anterior?'."
+    "notes": "Bloco 1 — F1 + F3 zero-resposta: pergunta de obstáculo ('o que está impedindo de resolver isso até agora?'). Para renegociações, pergunta adicional: 'o que impediu o cumprimento do acordo anterior?'.",
+    "done": false
   },
   {
     "id": "seed-2026-06-16-3",
     "date": "2026-06-16",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -513,23 +641,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-16-4",
     "date": "2026-06-16",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-16-5",
     "date": "2026-06-16",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
@@ -537,23 +671,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 — 3ª tentativa via canal automático."
+    "notes": "Áudio WhatsApp para F2/F4 — 3ª tentativa via canal automático.",
+    "done": false
   },
   {
     "id": "seed-2026-06-16-6",
     "date": "2026-06-16",
+    "start": "13:15",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-16h00) Bloco 2 — F2 + F4 engajados sem conclusão + maiores valores remanescent…",
+    "title": "Bloco 2 — F2 + F4 engajados sem conclusão + maiores valores remanescent…",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4 engajados sem conclusão + maiores valores remanescentes: fechamento. Renegociação prioritária mantida."
+    "notes": "Bloco 2 — F2 + F4 engajados sem conclusão + maiores valores remanescentes: fechamento. Renegociação prioritária mantida.",
+    "done": false
   },
   {
     "id": "seed-2026-06-16-7",
     "date": "2026-06-16",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -561,11 +701,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso."
+    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso.",
+    "done": false
   },
   {
     "id": "seed-2026-06-16-8",
     "date": "2026-06-16",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Separar 'zero resposta em todos os canais desde D1' (todas as faixas)",
@@ -573,11 +716,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Separar 'zero resposta em todos os canais desde D1' (todas as faixas) — abordagem diferenciada amanhã."
+    "notes": "Separar 'zero resposta em todos os canais desde D1' (todas as faixas) — abordagem diferenciada amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-16-9",
     "date": "2026-06-16",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -585,11 +731,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-0",
     "date": "2026-06-17",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "Disparo BLIP (massa via WhatsApp)",
@@ -597,11 +746,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[17/06 (qua) — D5, disparo BLIP + canal alternativo]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos · 100% BLIP às 9h.\n\nDisparo BLIP (massa via WhatsApp): mensagem padronizada para 100% da base (F1-F4) reforçando notificação extrajudicial + opções de pagamento. Disparo único, automatizado — conta como 1 acionamento por cliente."
+    "notes": "[17/06 (qua) — D5, disparo BLIP + canal alternativo]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos · 100% BLIP às 9h.\n\nDisparo BLIP (massa via WhatsApp): mensagem padronizada para 100% da base (F1-F4) reforçando notificação extrajudicial + opções de pagamento. Disparo único, automatizado — conta como 1 acionamento por cliente.",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-1",
     "date": "2026-06-17",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático",
@@ -609,23 +761,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "E-mail automático: saldo atualizado para 100% da base."
+    "notes": "E-mail automático: saldo atualizado para 100% da base.",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-2",
     "date": "2026-06-17",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
-    "notes": "Bloco 1 — F1 + F3: para 'zero resposta', ligação com pergunta de obstáculo. Classifica: falta de dinheiro / esquecimento / insatisfação / outro."
+    "notes": "Bloco 1 — F1 + F3: para 'zero resposta', ligação com pergunta de obstáculo. Classifica: falta de dinheiro / esquecimento / insatisfação / outro.",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-3",
     "date": "2026-06-17",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -633,23 +791,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-4",
     "date": "2026-06-17",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-5",
     "date": "2026-06-17",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Para F1/F3 ainda sem resposta",
@@ -657,11 +821,14 @@
     "volume": 280,
     "pitch": "",
     "objections": "",
-    "notes": "Para F1/F3 ainda sem resposta: WhatsApp formal em texto (canal alternativo)."
+    "notes": "Para F1/F3 ainda sem resposta: WhatsApp formal em texto (canal alternativo).",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-6",
     "date": "2026-06-17",
+    "start": "13:15",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp automático para F2/F4 não respondidos ao disparo BLIP",
@@ -669,23 +836,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp automático para F2/F4 não respondidos ao disparo BLIP — 2º toque do dia nestas faixas."
+    "notes": "Áudio WhatsApp automático para F2/F4 não respondidos ao disparo BLIP — 2º toque do dia nestas faixas.",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-7",
     "date": "2026-06-17",
+    "start": "13:30",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h30-16h00) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: ligação humana para maiores valores remanescentes + 'engajados sem conclusão'. Renegociação prioritária mantida."
+    "notes": "Bloco 2 — F2 + F4: ligação humana para maiores valores remanescentes + 'engajados sem conclusão'. Renegociação prioritária mantida.",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-8",
     "date": "2026-06-17",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -693,11 +866,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso."
+    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso.",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-9",
     "date": "2026-06-17",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Registrar classificação de obstáculo (todas as faixas)",
@@ -705,11 +881,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
-    "notes": "Registrar classificação de obstáculo (todas as faixas) — alimenta a notificação reforçada da próxima semana."
+    "notes": "Registrar classificação de obstáculo (todas as faixas) — alimenta a notificação reforçada da próxima semana.",
+    "done": false
   },
   {
     "id": "seed-2026-06-17-10",
     "date": "2026-06-17",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -717,11 +896,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-18-0",
     "date": "2026-06-18",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático",
@@ -729,11 +911,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[18/06 (qui) — D6, pico de cadência geral]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos · até 3x cartão.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
+    "notes": "[18/06 (qui) — D6, pico de cadência geral]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos · até 3x cartão.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-18-1",
     "date": "2026-06-18",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático",
@@ -741,23 +926,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático: 100% da base, reforço das opções — sem prazo, sem desconto."
+    "notes": "WhatsApp automático: 100% da base, reforço das opções — sem prazo, sem desconto.",
+    "done": false
   },
   {
     "id": "seed-2026-06-18-2",
     "date": "2026-06-18",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "[Nome], aqui é [analista] de novo. Sua situação está em [N] faturas em aberto, totalizando R$ XXX. Posso te ajudar a resolver hoje — Pix à vista ou parcelamento até 3x no cartão. O que prefere?",
     "objections": "",
-    "notes": "Bloco 1 — F1 + F3: maior volume da semana, toda a fila restante destas faixas (ligação completa, ~30-40s). Renegociações ainda em aberto recebem prioridade de fechamento."
+    "notes": "Bloco 1 — F1 + F3: maior volume da semana, toda a fila restante destas faixas (ligação completa, ~30-40s). Renegociações ainda em aberto recebem prioridade de fechamento.",
+    "done": false
   },
   {
     "id": "seed-2026-06-18-3",
     "date": "2026-06-18",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -765,23 +956,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-18-4",
     "date": "2026-06-18",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-18-5",
     "date": "2026-06-18",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
@@ -789,23 +986,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
+    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia.",
+    "done": false
   },
   {
     "id": "seed-2026-06-18-6",
     "date": "2026-06-18",
+    "start": "13:15",
+    "end": "15:45",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-15h45) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: toda a fila restante destas faixas (ligação direta, ~20-25s). Renegociações com prioridade."
+    "notes": "Bloco 2 — F2 + F4: toda a fila restante destas faixas (ligação direta, ~20-25s). Renegociações com prioridade.",
+    "done": false
   },
   {
     "id": "seed-2026-06-18-7",
     "date": "2026-06-18",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -813,23 +1016,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso."
+    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso.",
+    "done": false
   },
   {
     "id": "seed-2026-06-18-8",
     "date": "2026-06-18",
+    "start": "16:15",
+    "end": "17:45",
     "hour": 16,
     "cat": "movimento",
-    "title": "(16h15-17h45) Bloco extra — todas as faixas",
+    "title": "Bloco extra — todas as faixas",
     "owner": "Equipe",
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco extra — todas as faixas: 2ª rodada para 'engajados sem conclusão' do dia — fechamento."
+    "notes": "Bloco extra — todas as faixas: 2ª rodada para 'engajados sem conclusão' do dia — fechamento.",
+    "done": false
   },
   {
     "id": "seed-2026-06-18-9",
     "date": "2026-06-18",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -837,11 +1046,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-19-0",
     "date": "2026-06-19",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático",
@@ -849,11 +1061,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[19/06 (sex) — D7, confirmação + sustentação]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
+    "notes": "[19/06 (sex) — D7, confirmação + sustentação]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-19-1",
     "date": "2026-06-19",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático",
@@ -861,23 +1076,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático: 100% da base, confirmação de promessas com vencimento neste fim de semana ou segunda."
+    "notes": "WhatsApp automático: 100% da base, confirmação de promessas com vencimento neste fim de semana ou segunda.",
+    "done": false
   },
   {
     "id": "seed-2026-06-19-2",
     "date": "2026-06-19",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 1 — F1 + F3: 2ª tentativa para não atendidos de ontem (horário invertido). Renegociação prioritária mantida."
+    "notes": "Bloco 1 — F1 + F3: 2ª tentativa para não atendidos de ontem (horário invertido). Renegociação prioritária mantida.",
+    "done": false
   },
   {
     "id": "seed-2026-06-19-3",
     "date": "2026-06-19",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -885,23 +1106,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-19-4",
     "date": "2026-06-19",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-19-5",
     "date": "2026-06-19",
+    "start": "13:15",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
@@ -909,23 +1136,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
+    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia.",
+    "done": false
   },
   {
     "id": "seed-2026-06-19-6",
     "date": "2026-06-19",
+    "start": "13:30",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h30-16h00) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: continuação da fila — fechar a semana com máximo de promessas confirmadas. Renegociação prioritária mantida."
+    "notes": "Bloco 2 — F2 + F4: continuação da fila — fechar a semana com máximo de promessas confirmadas. Renegociação prioritária mantida.",
+    "done": false
   },
   {
     "id": "seed-2026-06-19-7",
     "date": "2026-06-19",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -933,11 +1166,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso antes do fim de semana."
+    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso antes do fim de semana.",
+    "done": false
   },
   {
     "id": "seed-2026-06-19-8",
     "date": "2026-06-19",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Organização da lista de segunda por faixa",
@@ -945,11 +1181,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Organização da lista de segunda por faixa — promessas a vencer + 'engajados sem conclusão' acumulados + renegociações ainda sem resposta."
+    "notes": "Organização da lista de segunda por faixa — promessas a vencer + 'engajados sem conclusão' acumulados + renegociações ainda sem resposta.",
+    "done": false
   },
   {
     "id": "seed-2026-06-19-9",
     "date": "2026-06-19",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -957,11 +1196,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-20-0",
     "date": "2026-06-20",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base (F1-F4)",
@@ -969,11 +1211,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[20/06 (sáb) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base (F1-F4): extrato consolidado para quem tem promessa vencendo hoje ou amanhã — lembrete, sem cobrança nova."
+    "notes": "[20/06 (sáb) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base (F1-F4): extrato consolidado para quem tem promessa vencendo hoje ou amanhã — lembrete, sem cobrança nova.",
+    "done": false
   },
   {
     "id": "seed-2026-06-21-0",
     "date": "2026-06-21",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base (F1-F4)",
@@ -981,11 +1226,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[21/06 (dom) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base (F1-F4): extrato atualizado (mantém cobertura diária)."
+    "notes": "[21/06 (dom) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base (F1-F4): extrato atualizado (mantém cobertura diária).",
+    "done": false
   },
   {
     "id": "seed-2026-06-21-1",
     "date": "2026-06-21",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "outro",
     "title": "Sistema processa pagamentos do fim de semana e monta fila de segunda po…",
@@ -993,11 +1241,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Sistema processa pagamentos do fim de semana e monta fila de segunda por faixa, com 10 dias de histórico de engajamento."
+    "notes": "Sistema processa pagamentos do fim de semana e monta fila de segunda por faixa, com 10 dias de histórico de engajamento.",
+    "done": false
   },
   {
     "id": "seed-2026-06-22-0",
     "date": "2026-06-22",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático",
@@ -1005,11 +1256,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[22/06 (seg) — D8, retomada pós-semana por faixa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4), descontando pagamentos do fim de semana."
+    "notes": "[22/06 (seg) — D8, retomada pós-semana por faixa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4), descontando pagamentos do fim de semana.",
+    "done": false
   },
   {
     "id": "seed-2026-06-22-1",
     "date": "2026-06-22",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático",
@@ -1017,23 +1271,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático: 100% da base."
+    "notes": "WhatsApp automático: 100% da base.",
+    "done": false
   },
   {
     "id": "seed-2026-06-22-2",
     "date": "2026-06-22",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 1 — F1 + F3: cobrar promessas vencidas no fim de semana não cumpridas — tom de retomada. Renegociações recebem reforço de que esta é a 2ª chance dentro do ciclo."
+    "notes": "Bloco 1 — F1 + F3: cobrar promessas vencidas no fim de semana não cumpridas — tom de retomada. Renegociações recebem reforço de que esta é a 2ª chance dentro do ciclo.",
+    "done": false
   },
   {
     "id": "seed-2026-06-22-3",
     "date": "2026-06-22",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -1041,23 +1301,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-22-4",
     "date": "2026-06-22",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-22-5",
     "date": "2026-06-22",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
@@ -1065,23 +1331,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
+    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia.",
+    "done": false
   },
   {
     "id": "seed-2026-06-22-6",
     "date": "2026-06-22",
+    "start": "13:15",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-16h00) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: continuação da fila, priorizada por valor + dias de atraso. Renegociação prioritária mantida."
+    "notes": "Bloco 2 — F2 + F4: continuação da fila, priorizada por valor + dias de atraso. Renegociação prioritária mantida.",
+    "done": false
   },
   {
     "id": "seed-2026-06-22-7",
     "date": "2026-06-22",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -1089,11 +1361,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso."
+    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso.",
+    "done": false
   },
   {
     "id": "seed-2026-06-22-8",
     "date": "2026-06-22",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Atualização de tags por faixa.",
@@ -1101,11 +1376,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Atualização de tags por faixa."
+    "notes": "Atualização de tags por faixa.",
+    "done": false
   },
   {
     "id": "seed-2026-06-22-9",
     "date": "2026-06-22",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -1113,11 +1391,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-23-0",
     "date": "2026-06-23",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático",
@@ -1125,11 +1406,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[23/06 (ter) — D9, cadência alta por faixa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
+    "notes": "[23/06 (ter) — D9, cadência alta por faixa]\nIndicadores do dia: 100-200% cobertura · 598-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-23-1",
     "date": "2026-06-23",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático",
@@ -1137,23 +1421,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático: 100% da base."
+    "notes": "WhatsApp automático: 100% da base.",
+    "done": false
   },
   {
     "id": "seed-2026-06-23-2",
     "date": "2026-06-23",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 1 — F1 + F3: continuação da fila — toda esta faixa recebe ao menos 1 toque na semana."
+    "notes": "Bloco 1 — F1 + F3: continuação da fila — toda esta faixa recebe ao menos 1 toque na semana.",
+    "done": false
   },
   {
     "id": "seed-2026-06-23-3",
     "date": "2026-06-23",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -1161,23 +1451,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-23-4",
     "date": "2026-06-23",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-23-5",
     "date": "2026-06-23",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
@@ -1185,23 +1481,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
+    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia.",
+    "done": false
   },
   {
     "id": "seed-2026-06-23-6",
     "date": "2026-06-23",
+    "start": "13:15",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-16h00) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: continuação."
+    "notes": "Bloco 2 — F2 + F4: continuação.",
+    "done": false
   },
   {
     "id": "seed-2026-06-23-7",
     "date": "2026-06-23",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -1209,11 +1511,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso."
+    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso.",
+    "done": false
   },
   {
     "id": "seed-2026-06-23-8",
     "date": "2026-06-23",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Separar 'zero resposta há 12 dias' (todas as faixas, incluindo renegoci…",
@@ -1221,11 +1526,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Separar 'zero resposta há 12 dias' (todas as faixas, incluindo renegociações sem resposta) — vira crônico em 4 dias."
+    "notes": "Separar 'zero resposta há 12 dias' (todas as faixas, incluindo renegociações sem resposta) — vira crônico em 4 dias.",
+    "done": false
   },
   {
     "id": "seed-2026-06-23-9",
     "date": "2026-06-23",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -1233,11 +1541,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-24-0",
     "date": "2026-06-24",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático",
@@ -1245,11 +1556,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[24/06 (qua) — D10, intensificação pré-pico]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4)."
+    "notes": "[24/06 (qua) — D10, intensificação pré-pico]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos.\n\nE-mail automático: saldo atualizado para 100% da base (F1-F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-24-1",
     "date": "2026-06-24",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático",
@@ -1257,23 +1571,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático: 100% da base — reforço de opções antes do pico de amanhã."
+    "notes": "WhatsApp automático: 100% da base — reforço de opções antes do pico de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-24-2",
     "date": "2026-06-24",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 1 — F1 + F3: continuação da fila ativa (engajados, promessas, valores altos sem fechamento, renegociações ainda abertas)."
+    "notes": "Bloco 1 — F1 + F3: continuação da fila ativa (engajados, promessas, valores altos sem fechamento, renegociações ainda abertas).",
+    "done": false
   },
   {
     "id": "seed-2026-06-24-3",
     "date": "2026-06-24",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -1281,23 +1601,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-24-4",
     "date": "2026-06-24",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-24-5",
     "date": "2026-06-24",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
@@ -1305,23 +1631,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
+    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia.",
+    "done": false
   },
   {
     "id": "seed-2026-06-24-6",
     "date": "2026-06-24",
+    "start": "13:15",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-16h00) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: continuação da fila ativa."
+    "notes": "Bloco 2 — F2 + F4: continuação da fila ativa.",
+    "done": false
   },
   {
     "id": "seed-2026-06-24-7",
     "date": "2026-06-24",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -1329,11 +1661,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso."
+    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso.",
+    "done": false
   },
   {
     "id": "seed-2026-06-24-8",
     "date": "2026-06-24",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Atualização de tags + preparação de listas para o pico de amanhã.",
@@ -1341,11 +1676,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Atualização de tags + preparação de listas para o pico de amanhã."
+    "notes": "Atualização de tags + preparação de listas para o pico de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-24-9",
     "date": "2026-06-24",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -1353,11 +1691,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-0",
     "date": "2026-06-25",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail",
@@ -1365,11 +1706,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[25/06 (qui) — D11, pico máximo do ciclo]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos · até 3x cartão.\n\nE-mail: extrato final do ciclo — valor total, opções (Pix, até 3x) para 100% da base (F1-F4). Sem prazo artificial — 'situação atual antes da próxima etapa'."
+    "notes": "[25/06 (qui) — D11, pico máximo do ciclo]\nIndicadores do dia: 150-200% cobertura · 897-1196 acionamentos · até 3x cartão.\n\nE-mail: extrato final do ciclo — valor total, opções (Pix, até 3x) para 100% da base (F1-F4). Sem prazo artificial — 'situação atual antes da próxima etapa'.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-1",
     "date": "2026-06-25",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático com a mesma mensagem do e-mail",
@@ -1377,23 +1721,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático com a mesma mensagem do e-mail — 100% da base."
+    "notes": "WhatsApp automático com a mesma mensagem do e-mail — 100% da base.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-2",
     "date": "2026-06-25",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "[Nome], é o [analista] de novo. Antes de mudarmos pra próxima etapa do processo, queria fechar isso com você hoje — Pix à vista ou parcelamento até 3x no cartão. Topa resolver agora? Te mando o link na hora.",
     "objections": "",
-    "notes": "Bloco 1 — F1 + F3: maior volume do ciclo para estas faixas — toda a carteira remanescente recebe contato. Pitch direto (~30s), foco em fechar antes da virada. Renegociações remanescentes têm prioridade absoluta."
+    "notes": "Bloco 1 — F1 + F3: maior volume do ciclo para estas faixas — toda a carteira remanescente recebe contato. Pitch direto (~30s), foco em fechar antes da virada. Renegociações remanescentes têm prioridade absoluta.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-3",
     "date": "2026-06-25",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -1401,23 +1751,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-4",
     "date": "2026-06-25",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-5",
     "date": "2026-06-25",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
@@ -1425,23 +1781,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia."
+    "notes": "Áudio WhatsApp para F2/F4 — 2ª cobertura do dia.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-6",
     "date": "2026-06-25",
+    "start": "13:15",
+    "end": "15:45",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-15h45) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: maior volume do ciclo para estas faixas."
+    "notes": "Bloco 2 — F2 + F4: maior volume do ciclo para estas faixas.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-7",
     "date": "2026-06-25",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -1449,23 +1811,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso antes da virada de fluxo."
+    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso antes da virada de fluxo.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-8",
     "date": "2026-06-25",
+    "start": "16:15",
+    "end": "17:45",
     "hour": 16,
     "cat": "movimento",
-    "title": "(16h15-17h45) Bloco extra — todas as faixas",
+    "title": "Bloco extra — todas as faixas",
     "owner": "Equipe",
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco extra — todas as faixas: fechamento para 'engajados sem conclusão' do dia."
+    "notes": "Bloco extra — todas as faixas: fechamento para 'engajados sem conclusão' do dia.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-9",
     "date": "2026-06-25",
+    "start": "17:45",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Meta",
@@ -1473,11 +1841,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Meta: maior taxa de conversão diária do ciclo — dia de virada antes da reclassificação."
+    "notes": "Meta: maior taxa de conversão diária do ciclo — dia de virada antes da reclassificação.",
+    "done": false
   },
   {
     "id": "seed-2026-06-25-10",
     "date": "2026-06-25",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -1485,11 +1856,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-26-0",
     "date": "2026-06-26",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail",
@@ -1497,11 +1871,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[26/06 (sex) — D12, resgate final por faixa]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos.\n\nE-mail: aviso de que a próxima semana muda o fluxo de atendimento para casos sem regularização — 100% da base (F1-F4)."
+    "notes": "[26/06 (sex) — D12, resgate final por faixa]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos.\n\nE-mail: aviso de que a próxima semana muda o fluxo de atendimento para casos sem regularização — 100% da base (F1-F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-26-1",
     "date": "2026-06-26",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp automático",
@@ -1509,23 +1886,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp automático: mesmo aviso — 100% da base."
+    "notes": "WhatsApp automático: mesmo aviso — 100% da base.",
+    "done": false
   },
   {
     "id": "seed-2026-06-26-2",
     "date": "2026-06-26",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 1 — F1 + F3: resgate de quem 'engajou sem conclusão' ontem. Foco total em fechamento, com atenção redobrada às renegociações (vão para o crônico com histórico de quebra dupla se não fecharem)."
+    "notes": "Bloco 1 — F1 + F3: resgate de quem 'engajou sem conclusão' ontem. Foco total em fechamento, com atenção redobrada às renegociações (vão para o crônico com histórico de quebra dupla se não fecharem).",
+    "done": false
   },
   {
     "id": "seed-2026-06-26-3",
     "date": "2026-06-26",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -1533,23 +1916,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-26-4",
     "date": "2026-06-26",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-26-5",
     "date": "2026-06-26",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4 não respondidos",
@@ -1557,23 +1946,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 não respondidos — última cobertura automática do ciclo."
+    "notes": "Áudio WhatsApp para F2/F4 não respondidos — última cobertura automática do ciclo.",
+    "done": false
   },
   {
     "id": "seed-2026-06-26-6",
     "date": "2026-06-26",
+    "start": "13:15",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-16h00) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: resgate dos demais 'engajados sem conclusão' da semana."
+    "notes": "Bloco 2 — F2 + F4: resgate dos demais 'engajados sem conclusão' da semana.",
+    "done": false
   },
   {
     "id": "seed-2026-06-26-7",
     "date": "2026-06-26",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -1581,11 +1976,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso antes da virada para o fluxo crônico."
+    "notes": "Ação preventiva — contato com quem fechou acordo ou prometeu pagamento hoje, reforço do compromisso antes da virada para o fluxo crônico.",
+    "done": false
   },
   {
     "id": "seed-2026-06-26-8",
     "date": "2026-06-26",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Encerramento do registro do ciclo de rolagem por faixa",
@@ -1593,11 +1991,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Encerramento do registro do ciclo de rolagem por faixa — casos sem regularização (incluindo renegociações) seguem para virada de fluxo na segunda."
+    "notes": "Encerramento do registro do ciclo de rolagem por faixa — casos sem regularização (incluindo renegociações) seguem para virada de fluxo na segunda.",
+    "done": false
   },
   {
     "id": "seed-2026-06-26-9",
     "date": "2026-06-26",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -1605,11 +2006,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-27-0",
     "date": "2026-06-27",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4)",
@@ -1617,11 +2021,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[27/06 (sáb) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4): extrato final + aviso de virada de fluxo na segunda."
+    "notes": "[27/06 (sáb) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4): extrato final + aviso de virada de fluxo na segunda.",
+    "done": false
   },
   {
     "id": "seed-2026-06-28-0",
     "date": "2026-06-28",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4)",
@@ -1629,11 +2036,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[28/06 (dom) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4): confirmações de pagamentos do fim de semana."
+    "notes": "[28/06 (dom) — operação automática]\nIndicadores do dia: 100% e-mail+WhatsApp p/ toda base · 0 ligações.\n\nE-mail + WhatsApp automáticos para 100% da base remanescente (F1-F4): confirmações de pagamentos do fim de semana.",
+    "done": false
   },
   {
     "id": "seed-2026-06-29-0",
     "date": "2026-06-29",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "Disparo automático",
@@ -1641,11 +2051,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[29/06 (seg) — virada para crônico, reforço de notificação]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · até 3x cartão.\n\nDisparo automático: reforço da notificação extrajudicial (e-mail + carta com AR para casos acima do ponto de corte) para 100% dos casos sem regularização desde 11/06 (F1-F4)."
+    "notes": "[29/06 (seg) — virada para crônico, reforço de notificação]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · até 3x cartão.\n\nDisparo automático: reforço da notificação extrajudicial (e-mail + carta com AR para casos acima do ponto de corte) para 100% dos casos sem regularização desde 11/06 (F1-F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-29-1",
     "date": "2026-06-29",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp com link de autoatendimento",
@@ -1653,23 +2066,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "WhatsApp com link de autoatendimento — simulador de acordo (Pix à vista ou até 3x) + assinatura digital — 100% da base remanescente."
+    "notes": "WhatsApp com link de autoatendimento — simulador de acordo (Pix à vista ou até 3x) + assinatura digital — 100% da base remanescente.",
+    "done": false
   },
   {
     "id": "seed-2026-06-29-2",
     "date": "2026-06-29",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3 sem regularização",
+    "title": "Bloco 1 — F1 + F3 sem regularização",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
-    "notes": "Bloco 1 — F1 + F3 sem regularização: ligação completa, organizada por valor e classificação de obstáculo. Clientes com quebra dupla (já quebraram antes e não responderam neste ciclo) recebem proposta com exigência de garantia adicional (cartão como meio de pagamento, não boleto)."
+    "notes": "Bloco 1 — F1 + F3 sem regularização: ligação completa, organizada por valor e classificação de obstáculo. Clientes com quebra dupla (já quebraram antes e não responderam neste ciclo) recebem proposta com exigência de garantia adicional (cartão como meio de pagamento, não boleto).",
+    "done": false
   },
   {
     "id": "seed-2026-06-29-3",
     "date": "2026-06-29",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -1677,23 +2096,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-29-4",
     "date": "2026-06-29",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-29-5",
     "date": "2026-06-29",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
@@ -1701,23 +2126,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 — reforço do link de autoatendimento."
+    "notes": "Áudio WhatsApp para F2/F4 — reforço do link de autoatendimento.",
+    "done": false
   },
   {
     "id": "seed-2026-06-29-6",
     "date": "2026-06-29",
+    "start": "13:15",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-16h00) Bloco 2 — F2 + F4 sem regularização",
+    "title": "Bloco 2 — F2 + F4 sem regularização",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
-    "notes": "Bloco 2 — F2 + F4 sem regularização: ligação direta, com proposta de até 3x já personalizada pela classificação de obstáculo. Quebra dupla segue exigência de garantia adicional."
+    "notes": "Bloco 2 — F2 + F4 sem regularização: ligação direta, com proposta de até 3x já personalizada pela classificação de obstáculo. Quebra dupla segue exigência de garantia adicional.",
+    "done": false
   },
   {
     "id": "seed-2026-06-29-7",
     "date": "2026-06-29",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -1725,11 +2156,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem formalizou acordo hoje, reforço do compromisso assumido na fase crônica."
+    "notes": "Ação preventiva — contato com quem formalizou acordo hoje, reforço do compromisso assumido na fase crônica.",
+    "done": false
   },
   {
     "id": "seed-2026-06-29-8",
     "date": "2026-06-29",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Registro de formalizações do dia.",
@@ -1737,11 +2171,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Registro de formalizações do dia."
+    "notes": "Registro de formalizações do dia.",
+    "done": false
   },
   {
     "id": "seed-2026-06-29-9",
     "date": "2026-06-29",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -1749,11 +2186,14 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-30-0",
     "date": "2026-06-30",
+    "start": "09:00",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "E-mail automático",
@@ -1761,11 +2201,14 @@
     "volume": 598,
     "pitch": "",
     "objections": "",
-    "notes": "[30/06 (ter) — D2 crônico, negociação ativa]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · ~8-10% meta formalização.\n\nE-mail automático: reforço do prazo de resposta da notificação extrajudicial — 100% da base remanescente (F1-F4)."
+    "notes": "[30/06 (ter) — D2 crônico, negociação ativa]\nIndicadores do dia: 100-150% cobertura · 598-897 acionamentos · ~8-10% meta formalização.\n\nE-mail automático: reforço do prazo de resposta da notificação extrajudicial — 100% da base remanescente (F1-F4).",
+    "done": false
   },
   {
     "id": "seed-2026-06-30-1",
     "date": "2026-06-30",
+    "start": "09:05",
+    "end": "",
     "hour": 9,
     "cat": "volumetria",
     "title": "WhatsApp reforçando o link de autoatendimento, segmentado pela classifi…",
@@ -1773,23 +2216,29 @@
     "volume": 598,
     "pitch": "",
     "objections": "Classificação de obstáculo: falta de dinheiro / esquecimento / insatisfação / outro.",
-    "notes": "WhatsApp reforçando o link de autoatendimento, segmentado pela classificação de obstáculo — 100% da base."
+    "notes": "WhatsApp reforçando o link de autoatendimento, segmentado pela classificação de obstáculo — 100% da base.",
+    "done": false
   },
   {
     "id": "seed-2026-06-30-2",
     "date": "2026-06-30",
+    "start": "09:15",
+    "end": "12:00",
     "hour": 9,
     "cat": "movimento",
-    "title": "(9h15-12h00) Bloco 1 — F1 + F3",
+    "title": "Bloco 1 — F1 + F3",
     "owner": "Equipe",
     "volume": 280,
     "pitch": "[Nome], tudo bem? Você recebeu nossa notificação — tem um link onde você mesmo simula o acordo (à vista ou em até 3x no cartão) e assina digital, sem precisar conversar com ninguém. Mas posso já te passar as opções agora também. O que faz mais sentido?",
     "objections": "",
-    "notes": "Bloco 1 — F1 + F3: prioridade para quem abriu o link sem concluir (até 3 toques) — fechamento assistido."
+    "notes": "Bloco 1 — F1 + F3: prioridade para quem abriu o link sem concluir (até 3 toques) — fechamento assistido.",
+    "done": false
   },
   {
     "id": "seed-2026-06-30-3",
     "date": "2026-06-30",
+    "start": "12:00",
+    "end": "",
     "hour": 12,
     "cat": "reuniao",
     "title": "Report de resultados parciais pela gestão",
@@ -1797,23 +2246,29 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã."
+    "notes": "Report de resultados parciais pela gestão — acionamentos realizados, atendimentos, promessas e pagamentos confirmados na manhã.",
+    "done": false
   },
   {
     "id": "seed-2026-06-30-4",
     "date": "2026-06-30",
+    "start": "12:00",
+    "end": "13:00",
     "hour": 12,
     "cat": "outro",
-    "title": "(12h-13h) Pausa para almoço.",
+    "title": "Pausa para almoço.",
     "owner": "",
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Pausa para almoço."
+    "notes": "Pausa para almoço.",
+    "done": false
   },
   {
     "id": "seed-2026-06-30-5",
     "date": "2026-06-30",
+    "start": "13:00",
+    "end": "",
     "hour": 13,
     "cat": "volumetria",
     "title": "Áudio WhatsApp para F2/F4",
@@ -1821,23 +2276,29 @@
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Áudio WhatsApp para F2/F4 — reforço final do ciclo."
+    "notes": "Áudio WhatsApp para F2/F4 — reforço final do ciclo.",
+    "done": false
   },
   {
     "id": "seed-2026-06-30-6",
     "date": "2026-06-30",
+    "start": "13:15",
+    "end": "16:00",
     "hour": 13,
     "cat": "movimento",
-    "title": "(13h15-16h00) Bloco 2 — F2 + F4",
+    "title": "Bloco 2 — F2 + F4",
     "owner": "Equipe",
     "volume": 318,
     "pitch": "",
     "objections": "",
-    "notes": "Bloco 2 — F2 + F4: maiores valores sem resposta à notificação — pitch completo, teto até 3x no cartão e pergunta sobre terceiro disponível."
+    "notes": "Bloco 2 — F2 + F4: maiores valores sem resposta à notificação — pitch completo, teto até 3x no cartão e pergunta sobre terceiro disponível.",
+    "done": false
   },
   {
     "id": "seed-2026-06-30-7",
     "date": "2026-06-30",
+    "start": "16:00",
+    "end": "",
     "hour": 16,
     "cat": "movimento",
     "title": "Ação preventiva",
@@ -1845,11 +2306,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Ação preventiva — contato com quem formalizou acordo hoje, reforço do compromisso e encerramento do ciclo."
+    "notes": "Ação preventiva — contato com quem formalizou acordo hoje, reforço do compromisso e encerramento do ciclo.",
+    "done": false
   },
   {
     "id": "seed-2026-06-30-8",
     "date": "2026-06-30",
+    "start": "17:00",
+    "end": "",
     "hour": 17,
     "cat": "outro",
     "title": "Registro de formalizações do dia + atualização de fila para o ciclo de …",
@@ -1857,11 +2321,14 @@
     "volume": "",
     "pitch": "",
     "objections": "",
-    "notes": "Registro de formalizações do dia + atualização de fila para o ciclo de julho."
+    "notes": "Registro de formalizações do dia + atualização de fila para o ciclo de julho.",
+    "done": false
   },
   {
     "id": "seed-2026-06-30-9",
     "date": "2026-06-30",
+    "start": "18:00",
+    "end": "",
     "hour": 18,
     "cat": "reuniao",
     "title": "Report de resultados do dia pela gestão + análise de objeções",
@@ -1869,6 +2336,7 @@
     "volume": "",
     "pitch": "",
     "objections": "Análise de objeções: levantamento dos motivos de recusa mais frequentes do dia, usado para ajustar pitch e priorização do dia seguinte.",
-    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã."
+    "notes": "Report de resultados do dia pela gestão + análise de objeções — consolidação dos números do dia e levantamento dos motivos de recusa mais frequentes, usado para ajustar pitch e priorização de amanhã.",
+    "done": false
   }
 ]

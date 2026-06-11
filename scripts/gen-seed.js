@@ -25,11 +25,15 @@ const { data } = fn();
 // 2026-06 — junho
 const pad = (n) => String(n).padStart(2, "0");
 
-// Hora inicial a partir de rótulos como "9h00", "9h20-12h00", "12h-13h", "—"
-function parseHour(label) {
-  const mm = String(label).match(/(\d{1,2})\s*h/);
-  if (mm) return Math.max(0, Math.min(23, Number(mm[1])));
-  return 18; // tarefas de sistema sem horário ("—") ao fim do expediente
+// Início e fim a partir de rótulos como "9h00", "9h20-12h00", "12h-13h", "—"
+function parseRange(label) {
+  const parts = String(label).trim().split(/\s*[-–]\s*/);
+  const toHM = (x) => {
+    const m = String(x).match(/(\d{1,2})\s*h\s*(\d{0,2})/);
+    if (!m) return "";
+    return pad(Number(m[1])) + ":" + pad(m[2] ? Number(m[2]) : 0);
+  };
+  return { start: toHM(parts[0]), end: parts[1] ? toHM(parts[1]) : "" };
 }
 
 // Categoria a partir do ícone Tabler usado no rascunho
@@ -69,8 +73,6 @@ function titleFrom(label, desc) {
   if (t === desc) t = desc.split(/ — | – /)[0];
   t = t.trim();
   if (t.length > 72) t = t.slice(0, 71) + "…";
-  // prefixa o intervalo quando o rótulo tem faixa horária (ex.: 9h20-12h00)
-  if (/-/.test(label)) t = `(${label}) ${t}`;
   return t;
 }
 
@@ -108,12 +110,16 @@ for (const day of days) {
 
   (item.h || []).forEach((hh, idx) => {
     const [label, icon, desc] = hh;
-    const hour = parseHour(label);
+    const { start, end } = parseRange(label);
+    const startT = start || "18:00"; // tarefas de sistema sem horário ("—")
+    const hour = Number(startT.slice(0, 2));
     const cat = categoryFor(icon, desc);
     const ev = {
       // id determinístico para o seed ser idempotente
       id: `seed-${date}-${idx}`,
       date,
+      start: startT,
+      end: end || "",
       hour,
       cat,
       title: titleFrom(label, desc),
@@ -122,6 +128,7 @@ for (const day of days) {
       pitch: "",
       objections: objectionsFor(icon, desc),
       notes: desc,
+      done: false,
     };
     // Anexa o pitch do dia ao primeiro bloco de ligação
     if (icon === "ti-phone-call" && !firstPhoneUsed && item.p) {
