@@ -18,7 +18,8 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const DATA_DIR = path.join(__dirname, "data");
+// DATA_DIR pode apontar para um disco persistente (ex.: /var/data no Render)
+const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, "data");
 const DATA_FILE = path.join(DATA_DIR, "events.json");
 
 app.use(express.json({ limit: "2mb" }));
@@ -140,7 +141,7 @@ app.post("/api/import", async (req, res) => {
 
 app.get("/api/health", (req, res) => res.json({ ok: true }));
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   ensureStore();
-  console.log(`Calendário de Cobrança rodando em http://localhost:${PORT}`);
+  console.log(`Calendário de Cobrança rodando na porta ${PORT} (dados em ${DATA_DIR})`);
 });

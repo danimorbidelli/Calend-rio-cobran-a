@@ -1,0 +1,24 @@
+# Blueprint de deploy no Render (https://render.com)
+# Para criar tudo de uma vez: New + > Blueprint > aponte para este repositório.
+#
+# OBS. sobre persistência dos dados:
+#  - No plano free, o sistema de arquivos é efêmero: os dados em data/events.json
+#    são reiniciados a cada novo deploy. Bom para testar.
+#  - Para dados duráveis, use um disco persistente: troque "plan: free" por
+#    "plan: starter" (pago) e descomente o bloco "disk" e a variável DATA_DIR.
+services:
+  - type: web
+    name: calendario-cobranca
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    # --- Persistência durável (requer plano pago) ---
+    # envVars:
+    #   - key: DATA_DIR
+    #     value: /var/data
+    # disk:
+    #   name: dados
+    #   mountPath: /var/data
+    #   sizeGB: 1

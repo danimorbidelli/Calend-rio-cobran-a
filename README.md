@@ -46,6 +46,26 @@ conectado"** e as alterações passam a ser compartilhadas.
 - **Exportar / Importar** em JSON para backup ou migração.
 - Funciona online (compartilhado) com **fallback automático** para uso local.
 
+## Deploy no Render (link público + edição compartilhada)
+
+O repositório já vem com um blueprint (`render.yaml`).
+
+1. Crie uma conta gratuita em https://render.com (pode entrar com o GitHub).
+2. **New +** → **Blueprint** → selecione este repositório
+   (`danimorbidelli/Calend-rio-cobran-a`) → **Apply**.
+   - Ou, sem blueprint: **New +** → **Web Service** → conecte o repo →
+     Build Command `npm install`, Start Command `npm start`.
+3. Ao final, o Render fornece uma URL pública, ex.:
+   `https://calendario-cobranca.onrender.com`. É esse o link de acesso da equipe.
+
+### Persistência dos dados
+- No **plano free**, o disco é efêmero: os dados (`data/events.json`) são
+  reiniciados a cada novo deploy, e o serviço hiberna após ~15 min sem uso
+  (a primeira visita depois disso demora alguns segundos). Ótimo para validar.
+- Para **dados duráveis**, edite o `render.yaml`: troque `plan: free` por
+  `plan: starter` (pago) e descomente o bloco `disk` + a variável `DATA_DIR`.
+  Alternativamente, posso adaptar para um banco de dados — é só pedir.
+
 ## Arquitetura
 
 - `server.js` — API REST (Node + Express) e servidor estático. Persistência
