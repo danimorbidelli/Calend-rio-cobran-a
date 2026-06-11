@@ -1,11 +1,16 @@
 # Blueprint de deploy no Render (https://render.com)
 # Para criar tudo de uma vez: New + > Blueprint > aponte para este repositório.
 #
-# OBS. sobre persistência dos dados:
-#  - No plano free, o sistema de arquivos é efêmero: os dados em data/events.json
-#    são reiniciados a cada novo deploy. Bom para testar.
-#  - Para dados duráveis, use um disco persistente: troque "plan: free" por
-#    "plan: starter" (pago) e descomente o bloco "disk" e a variável DATA_DIR.
+# Persistência dos dados:
+#  - Por padrão usa um banco PostgreSQL gerenciado (durável), criado aqui
+#    mesmo pelo blueprint, e injetado no app via DATABASE_URL.
+#  - Se preferir não usar banco (modo arquivo), remova o bloco "databases" e a
+#    envVar DATABASE_URL: o app cai automaticamente no arquivo JSON local
+#    (efêmero no plano free).
+databases:
+  - name: calendario-db
+    plan: free
+
 services:
   - type: web
     name: calendario-cobranca
@@ -14,11 +19,9 @@ services:
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /api/health
-    # --- Persistência durável (requer plano pago) ---
-    # envVars:
-    #   - key: DATA_DIR
-    #     value: /var/data
-    # disk:
-    #   name: dados
-    #   mountPath: /var/data
-    #   sizeGB: 1
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: calendario-db
+          property: connectionString
+

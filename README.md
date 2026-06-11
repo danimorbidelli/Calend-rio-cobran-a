@@ -59,17 +59,28 @@ O repositório já vem com um blueprint (`render.yaml`).
    `https://calendario-cobranca.onrender.com`. É esse o link de acesso da equipe.
 
 ### Persistência dos dados
-- No **plano free**, o disco é efêmero: os dados (`data/events.json`) são
-  reiniciados a cada novo deploy, e o serviço hiberna após ~15 min sem uso
-  (a primeira visita depois disso demora alguns segundos). Ótimo para validar.
-- Para **dados duráveis**, edite o `render.yaml`: troque `plan: free` por
-  `plan: starter` (pago) e descomente o bloco `disk` + a variável `DATA_DIR`.
-  Alternativamente, posso adaptar para um banco de dados — é só pedir.
+- O blueprint já cria um **PostgreSQL gerenciado** no Render e injeta a
+  variável `DATABASE_URL` no app — os dados ficam **duráveis** (não se perdem
+  em redeploys). O serviço web no plano free ainda hiberna após ~15 min sem
+  uso (a primeira visita depois disso demora alguns segundos).
+- Sem banco, o app usa um **arquivo JSON local** (`data/events.json`),
+  efêmero no plano free. Para ativar esse modo, remova do `render.yaml` o
+  bloco `databases` e a envVar `DATABASE_URL`.
+
+### Armazenamento (resumo)
+| Cenário | Backend | Durável? |
+|---|---|---|
+| `DATABASE_URL` definida | PostgreSQL | Sim |
+| Sem `DATABASE_URL` | Arquivo JSON (`DATA_DIR` ou `./data`) | Depende do disco |
+
+Funciona com qualquer Postgres (Render, Supabase, Neon…): basta definir
+`DATABASE_URL`. O endpoint `GET /api/health` informa qual backend está ativo.
 
 ## Arquitetura
 
-- `server.js` — API REST (Node + Express) e servidor estático. Persistência
-  em arquivo JSON, com gravações serializadas e atômicas.
+- `server.js` — API REST (Node + Express) e servidor estático.
+- `storage.js` — camada de persistência: PostgreSQL (`DATABASE_URL`) ou
+  arquivo JSON, selecionada automaticamente. Mesma interface para ambos.
 - `public/index.html` — aplicação frontend (HTML + JS puro, sem build).
 - Endpoints: `GET/POST /api/events`, `PUT/DELETE /api/events/:id`,
   `POST /api/import`, `GET /api/health`.
