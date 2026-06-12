@@ -47,6 +47,7 @@ function createFileStore() {
   const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, "data");
   const DATA_FILE = path.join(DATA_DIR, "events.json");
   const META_FILE = path.join(DATA_DIR, "meta.json");
+  const LIB_FILE = path.join(DATA_DIR, "library.json");
   let writeQueue = Promise.resolve();
 
   function ensure() {
@@ -127,6 +128,36 @@ function createFileStore() {
       m[k] = v;
       await fsp.writeFile(META_FILE, JSON.stringify(m, null, 2), "utf8");
     },
+
+    // ---- Biblioteca (diretórios: pitch / objecao / estrategia) ----
+    async libReadAll() {
+      ensure();
+      try { const d = JSON.parse(await fsp.readFile(LIB_FILE, "utf8")); return Array.isArray(d) ? d : []; }
+      catch (e) { return []; }
+    },
+    async libWriteAll(list) {
+      writeQueue = writeQueue.then(async () => {
+        ensure();
+        const tmp = LIB_FILE + ".tmp";
+        await fsp.writeFile(tmp, JSON.stringify(list, null, 2), "utf8");
+        await fsp.rename(tmp, LIB_FILE);
+      }).catch((e) => console.error("Erro ao gravar biblioteca:", e));
+      return writeQueue;
+    },
+    async libList(dir) { const all = await this.libReadAll(); return (dir ? all.filter((e) => e.dir === dir) : all); },
+    async libCreate(entry) { const all = await this.libReadAll(); all.push(entry); await this.libWriteAll(all); return entry; },
+    async libUpdate(id, entry) {
+      const all = await this.libReadAll(); const i = all.findIndex((e) => e.id === id);
+      if (i < 0) return null; all[i] = entry; await this.libWriteAll(all); return entry;
+    },
+    async libRemove(id) {
+      const all = await this.libReadAll(); const next = all.filter((e) => e.id !== id);
+      if (next.length === all.length) return false; await this.libWriteAll(next); return true;
+    },
+    async libReplaceSeed(seed) {
+      const kept = (await this.libReadAll()).filter((e) => !String(e.id).startsWith("lib-"));
+      const merged = kept.concat(seed); await this.libWriteAll(merged); return merged.length;
+    },
   };
 }
 
@@ -168,6 +199,11 @@ function createPgStore(connectionString) {
         ALTER TABLE events ADD COLUMN IF NOT EXISTS summary_only BOOLEAN DEFAULT FALSE;
         CREATE INDEX IF NOT EXISTS idx_events_date ON events(date);
         CREATE TABLE IF NOT EXISTS meta (k TEXT PRIMARY KEY, v TEXT);
+        CREATE TABLE IF NOT EXISTS library (
+          id TEXT PRIMARY KEY, dir TEXT NOT NULL, title TEXT NOT NULL,
+          body TEXT, updated_at TIMESTAMPTZ
+        );
+        CREATE INDEX IF NOT EXISTS idx_library_dir ON library(dir);
       `);
     },
     async list({ from, to } = {}) {
@@ -230,6 +266,45 @@ function createPgStore(connectionString) {
     async setMeta(k, v) {
       await pool.query(`INSERT INTO meta (k,v) VALUES ($1,$2)
         ON CONFLICT (k) DO UPDATE SET v=EXCLUDED.v`, [k, v]);
+    },
+
+    // ---- Biblioteca ----
+    async libList(dir) {
+      const sql = "SELECT id,dir,title,body,updated_at AS \"updatedAt\" FROM library" +
+        (dir ? " WHERE dir=$1" : "") + " ORDER BY updated_at DESC NULLS LAST, title";
+      const { rows } = await pool.query(sql, dir ? [dir] : []);
+      return rows;
+    },
+    async libCreate(e) {
+      await pool.query(`INSERT INTO library (id,dir,title,body,updated_at) VALUES ($1,$2,$3,$4,$5)`,
+        [e.id, e.dir, e.title, e.body, e.updatedAt]);
+      return e;
+    },
+    async libUpdate(id, e) {
+      const { rowCount } = await pool.query(
+        `UPDATE library SET dir=$2,title=$3,body=$4,updated_at=$5 WHERE id=$1`,
+        [id, e.dir, e.title, e.body, e.updatedAt]);
+      return rowCount ? e : null;
+    },
+    async libRemove(id) {
+      const { rowCount } = await pool.query("DELETE FROM library WHERE id=$1", [id]);
+      return rowCount > 0;
+    },
+    async libReplaceSeed(seed) {
+      const client = await pool.connect();
+      try {
+        await client.query("BEGIN");
+        await client.query("DELETE FROM library WHERE id LIKE 'lib-%'");
+        for (const e of seed) {
+          await client.query(`INSERT INTO library (id,dir,title,body,updated_at) VALUES ($1,$2,$3,$4,$5)
+            ON CONFLICT (id) DO UPDATE SET dir=EXCLUDED.dir,title=EXCLUDED.title,body=EXCLUDED.body,updated_at=EXCLUDED.updated_at`,
+            [e.id, e.dir, e.title, e.body, e.updatedAt]);
+        }
+        await client.query("COMMIT");
+        const { rows } = await client.query("SELECT COUNT(*)::int AS n FROM library");
+        return rows[0].n;
+      } catch (e) { await client.query("ROLLBACK"); throw e; }
+      finally { client.release(); }
     },
   };
 }

@@ -117,6 +117,37 @@ app.post("/api/import", wrap(async (req, res) => {
   res.json({ ok: true, total });
 }));
 
+// ---- Biblioteca (diretórios: pitch / objecao / estrategia) ----
+const LIB_DIRS = ["pitch", "objecao", "estrategia"];
+function sanitizeLib(body) {
+  const dir = String(body.dir || "");
+  if (!LIB_DIRS.includes(dir)) return { error: "Diretório inválido." };
+  const title = String(body.title || "").trim();
+  if (!title) return { error: "Título é obrigatório." };
+  return { entry: { id: body.id || uid(), dir, title, body: String(body.body || "").trim(), updatedAt: new Date().toISOString() } };
+}
+
+app.get("/api/library", wrap(async (req, res) => {
+  res.json(await store.libList(req.query.dir));
+}));
+app.post("/api/library", wrap(async (req, res) => {
+  const { entry, error } = sanitizeLib(req.body);
+  if (error) return res.status(400).json({ error });
+  res.status(201).json(await store.libCreate(entry));
+}));
+app.put("/api/library/:id", wrap(async (req, res) => {
+  const { entry, error } = sanitizeLib({ ...req.body, id: req.params.id });
+  if (error) return res.status(400).json({ error });
+  const updated = await store.libUpdate(req.params.id, entry);
+  if (!updated) return res.status(404).json({ error: "Item não encontrado." });
+  res.json(updated);
+}));
+app.delete("/api/library/:id", wrap(async (req, res) => {
+  const ok = await store.libRemove(req.params.id);
+  if (!ok) return res.status(404).json({ error: "Item não encontrado." });
+  res.json({ ok: true });
+}));
+
 app.get("/api/health", (req, res) => res.json({ ok: true, storage: store.label }));
 
 // Versão do seed: ao mudar, o servidor reaplica as atividades-modelo (substitui
@@ -139,8 +170,24 @@ async function seedAndUpgrade() {
   console.log(`Seed v${SEED_VERSION} aplicado: ${stamped.length} atividades-modelo (total na base: ${total}).`);
 }
 
+// Conteúdo-modelo da Biblioteca
+const LIB_SEED_VERSION = "1";
+async function seedLibrary() {
+  if (process.env.SEED === "off") return;
+  const applied = await store.getMeta("libSeedVersion");
+  if (applied === LIB_SEED_VERSION) return;
+  let seed;
+  try { seed = require("./lib-seed"); } catch (e) { return; }
+  if (!Array.isArray(seed) || seed.length === 0) return;
+  const stamped = seed.map((e) => ({ ...e, updatedAt: new Date().toISOString() }));
+  const total = await store.libReplaceSeed(stamped);
+  await store.setMeta("libSeedVersion", LIB_SEED_VERSION);
+  console.log(`Biblioteca v${LIB_SEED_VERSION}: ${stamped.length} itens-modelo (total: ${total}).`);
+}
+
 store.init()
   .then(seedAndUpgrade)
+  .then(seedLibrary)
   .then(() => {
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`Calendário de Cobrança rodando na porta ${PORT} — armazenamento: ${store.label}`);
