@@ -171,7 +171,12 @@
 <div class="layout">
   <aside class="sidebar">
     <div class="card">
-      <button id="btnPitches" class="primary" style="width:100%">📋 Pitches padrão</button>
+      <h3>Diretórios</h3>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <button class="lib-open primary" data-dir="pitch" style="width:100%">📋 Pitches</button>
+        <button class="lib-open" data-dir="objecao" style="width:100%">⚠️ Objeções</button>
+        <button class="lib-open" data-dir="estrategia" style="width:100%">🎯 Estratégias</button>
+      </div>
     </div>
 
     <div class="card">
@@ -259,9 +264,21 @@
         <label>Volumetria (qtd.)</label>
         <input type="number" id="evVolume" min="0" placeholder="0" />
       </div>
-      <div class="field"><label>Pitch utilizado</label><textarea id="evPitch" placeholder="Roteiro / abordagem aplicada"></textarea></div>
-      <div class="field"><label>Objeções registradas</label><textarea id="evObjections" placeholder="Principais objeções e contornos"></textarea></div>
-      <div class="field"><label>Observações</label><textarea id="evNotes" placeholder="Resultados, metas, anotações livres"></textarea></div>
+      <div class="field">
+        <label>Pitch utilizado</label>
+        <textarea id="evPitch" placeholder="Roteiro / abordagem aplicada"></textarea>
+        <button type="button" id="evPitchToLib" class="ghost" style="font-size:11px;padding:4px 8px;align-self:flex-start">→ Salvar em Pitches</button>
+      </div>
+      <div class="field">
+        <label>Objeções registradas</label>
+        <textarea id="evObjections" placeholder="Principais objeções e contornos"></textarea>
+        <button type="button" id="evObjToLib" class="ghost" style="font-size:11px;padding:4px 8px;align-self:flex-start">→ Salvar em Objeções</button>
+      </div>
+      <div class="field">
+        <label>Observações</label>
+        <textarea id="evNotes" placeholder="Resultados, metas, anotações livres"></textarea>
+        <button type="button" id="evNotesToLib" class="ghost" style="font-size:11px;padding:4px 8px;align-self:flex-start">→ Salvar em Estratégias</button>
+      </div>
       <label class="chk"><input type="checkbox" id="evDone" /> Atividade concluída</label>
       <label class="chk"><input type="checkbox" id="evSummaryOnly" /> Somente resumo (não exibir no calendário)</label>
     </div>
@@ -275,16 +292,24 @@
   </div>
 </div>
 
-<!-- Painel de Pitches padrão -->
-<div class="overlay" id="pitchOverlay">
-  <div class="modal" style="max-width:780px">
+<!-- Biblioteca (diretórios) -->
+<div class="overlay" id="libOverlay">
+  <div class="modal" style="max-width:820px">
     <div class="modal-head">
-      <h2>📋 Pitches padrão</h2>
-      <button class="close-x" id="closePitch">×</button>
+      <h2 id="libTitle">Biblioteca</h2>
+      <button class="close-x" id="closeLib">×</button>
     </div>
     <div class="modal-body">
-      <div class="pitch-tabs" id="pitchTabs"></div>
-      <div id="pitchContent"></div>
+      <div class="pitch-tabs" id="libTabs"></div>
+      <div id="libList"></div>
+      <div class="pp-section-label" id="libFormLabel">Incluir novo item</div>
+      <input type="hidden" id="libEditId" />
+      <div class="field"><label>Título</label><input id="libNewTitle" type="text" placeholder="Título do item" /></div>
+      <div class="field"><label>Conteúdo</label><textarea id="libNewBody" placeholder="Texto para consulta (pitch, tratamento de objeção ou estratégia)"></textarea></div>
+      <div style="display:flex;justify-content:flex-end;gap:8px">
+        <button id="libCancelEdit" class="ghost hidden">Cancelar edição</button>
+        <button id="libAdd" class="primary">+ Incluir no diretório</button>
+      </div>
     </div>
   </div>
 </div>
@@ -297,6 +322,7 @@
 
   const PREFS_KEY = "calendario_cobranca_prefs_v3";
   const CACHE_KEY = "calendario_cobranca_cache_v3";
+  const LIB_CACHE_KEY = "calendario_cobranca_lib_v1";
   const ROW = 56;            // pixels por hora
   const DEFAULT_DUR = 30;    // minutos para evento sem fim definido
 
@@ -319,35 +345,13 @@
   ];
   const ROSTER_NAMES = ROSTER.flatMap(g => g.names);
 
-  // Pitches padrão para consulta do analista
-  const STANDARD_PITCHES = [
-    {
-      id: "cancelamento",
-      title: "Solicitação de Cancelamento",
-      rules: [
-        { type: "no", label: "Nunca dizer", text: "\"Só cancelo se você pagar.\" — Cancelamento e cobrança são tratados como assuntos paralelos, nunca condicionais." },
-        { type: "yes", label: "Sempre fazer", text: "Cobrança apresentada como cuidado (\"pra você não ter problema depois\") e reunião com gerente de contas sempre oferecida." },
-      ],
-      order: [
-        "Acolher o pedido de cancelamento, sem travar o processo.",
-        "Oferecer o link de pagamento como cuidado, nunca como condição.",
-        "Agendar reunião com o gerente de contas para reversão.",
-        "Seguir com o trâmite normal de cancelamento.",
-      ],
-      pitches: [
-        { header: "Cliente neutro — pediu cancelamento sem motivo claro", body: "Compreendo seu pedido e já vou te orientar sobre o processo. Aproveitando que estamos falando, vi aqui que existe um valor em aberto na sua conta — para te poupar de juros ou restrição futura, posso já te enviar o link de pagamento agora? E, antes de finalizarmos, como você é um cliente importante pra gente, já estou acionando a agenda do seu gerente de contas para uma conversa rápida — às vezes ele consegue resolver o que está te incomodando." },
-        { header: "Cliente colaborativo — segue o fluxo sem resistência", body: "Sem problemas, vou seguir com sua solicitação. Só pra já deixar tudo certo do seu lado e não sobrar pendência no seu nome, você consegue regularizar esse valor em aberto comigo agora? E separado disso, vou agendar uma conversa com o gerente de contas — ele costuma trazer alternativas que muita gente não conhece." },
-        { header: "Cliente apressado — quer resolver rápido", body: "Entendo perfeitamente. Antes de seguir, deixa eu já agendar uma conversa rápida com o seu gerente de contas — ele tem autonomia pra rever condições e muitas vezes resolve o motivo do cancelamento. Posso confirmar [dia/horário]? Aproveito também e te mando o link do valor em aberto, assim você já deixa tudo certinho enquanto aguarda essa conversa." },
-        { header: "Cliente insatisfeito — reclamação como motivo", body: "Faz sentido você estar incomodado, e é por isso que quero que o gerente de contas fale com você o quanto antes — ele tem mais autonomia que eu pra resolver isso. Vou agendar essa conversa pra [dia]. E só aproveitando: identifiquei um valor pendente aqui, posso te passar o link agora pra você já deixar resolvido?" },
-      ],
-      checklist: [
-        "Verifiquei se há valor em aberto na conta?",
-        "Ofereci o link de pagamento, sem condicionar o cancelamento?",
-        "Agendei reunião com o gerente de contas (dia/horário confirmado)?",
-        "Segui com o trâmite de cancelamento?",
-      ],
-    },
+  // Diretórios da Biblioteca
+  const DIRS = [
+    { id: "pitch", label: "📋 Pitches" },
+    { id: "objecao", label: "⚠️ Objeções" },
+    { id: "estrategia", label: "🎯 Estratégias" },
   ];
+  const DIR_MAP = Object.fromEntries(DIRS.map(d => [d.id, d]));
 
   let prefs = loadPrefs();
   let currentDate = todayStr();
@@ -717,44 +721,96 @@
     catch (e) { alert("Erro ao excluir: " + e.message); }
   }
 
-  // ---------- Pitches padrão ----------
-  let pitchTab = STANDARD_PITCHES[0] ? STANDARD_PITCHES[0].id : null;
-  function openPitches() { renderPitches(); el("pitchOverlay").classList.add("open"); }
-  function closePitches() { el("pitchOverlay").classList.remove("open"); }
-  function renderPitches() {
-    const tabs = el("pitchTabs"); tabs.innerHTML = "";
-    STANDARD_PITCHES.forEach(p => {
+  // ---------- Biblioteca (diretórios) ----------
+  let libDir = "pitch";
+  let libItems = [];
+
+  function libCacheLoad() { try { return JSON.parse(localStorage.getItem(LIB_CACHE_KEY)) || []; } catch (e) { return []; } }
+  function libCacheSave(list) { localStorage.setItem(LIB_CACHE_KEY, JSON.stringify(list)); }
+
+  async function libLoad(dir) {
+    if (online) {
+      try {
+        const all = await api("/api/library");
+        libCacheSave(all);
+        return all.filter(e => e.dir === dir);
+      } catch (e) { setOnline(false); }
+    }
+    return libCacheLoad().filter(e => e.dir === dir);
+  }
+  async function libSave(entry, id) {
+    if (online) {
+      try { return await api("/api/library" + (id ? "/" + id : ""), { method: id ? "PUT" : "POST", body: JSON.stringify(entry) }); }
+      catch (e) { setOnline(false); }
+    }
+    const cache = libCacheLoad();
+    if (id) { const i = cache.findIndex(e => e.id === id); if (i >= 0) cache[i] = Object.assign(cache[i], entry); else cache.push(entry); }
+    else { entry.id = entry.id || uid(); cache.push(entry); }
+    libCacheSave(cache); return entry;
+  }
+  async function libDelete(id) {
+    if (online) { try { await api("/api/library/" + id, { method: "DELETE" }); return; } catch (e) { setOnline(false); } }
+    libCacheSave(libCacheLoad().filter(e => e.id !== id));
+  }
+
+  async function openLibrary(dir) { libDir = dir || libDir; resetLibForm(); el("libOverlay").classList.add("open"); await renderLibrary(); }
+  function closeLibrary() { el("libOverlay").classList.remove("open"); }
+  function resetLibForm() { el("libEditId").value = ""; el("libNewTitle").value = ""; el("libNewBody").value = ""; el("libFormLabel").textContent = "Incluir novo item"; el("libAdd").textContent = "+ Incluir no diretório"; el("libCancelEdit").classList.add("hidden"); }
+
+  async function renderLibrary() {
+    el("libTitle").textContent = "Biblioteca — " + DIR_MAP[libDir].label;
+    const tabs = el("libTabs"); tabs.innerHTML = "";
+    DIRS.forEach(d => {
       const b = document.createElement("button");
-      b.className = "pitch-tab" + (p.id === pitchTab ? " active" : "");
-      b.textContent = p.title;
-      b.onclick = () => { pitchTab = p.id; renderPitches(); };
+      b.className = "pitch-tab" + (d.id === libDir ? " active" : "");
+      b.textContent = d.label;
+      b.onclick = () => { libDir = d.id; resetLibForm(); renderLibrary(); };
       tabs.appendChild(b);
     });
-    const p = STANDARD_PITCHES.find(x => x.id === pitchTab) || STANDARD_PITCHES[0];
-    const c = el("pitchContent");
-    if (!p) { c.innerHTML = "<p>Nenhum pitch cadastrado.</p>"; return; }
-    let html = '<div class="pp-rules">';
-    p.rules.forEach(r => { html += `<div class="pp-rule ${r.type}"><div class="lbl">${escapeHtml(r.label)}</div><div>${escapeHtml(r.text)}</div></div>`; });
-    html += "</div>";
-    html += '<div class="pp-section-label">Ordem de execução</div><div class="pp-order">';
-    p.order.forEach((o, i) => { html += `<div class="step"><b>${i + 1}</b>${escapeHtml(o)}</div>`; });
-    html += "</div>";
-    html += '<div class="pp-section-label">Pitches por cenário</div>';
-    p.pitches.forEach((pt, i) => {
-      html += `<div class="pp-pitch"><div class="ph"><span>${escapeHtml(pt.header)}</span>` +
-        `<button data-copy="${i}" class="ghost" style="font-size:11px;padding:4px 8px">Copiar</button></div>` +
-        `<div class="pb">"${escapeHtml(pt.body)}"</div></div>`;
+    libItems = await libLoad(libDir);
+    const c = el("libList");
+    if (!libItems.length) { c.innerHTML = '<p style="color:var(--muted)">Nenhum item neste diretório ainda. Inclua o primeiro abaixo.</p>'; return; }
+    c.innerHTML = "";
+    libItems.forEach(it => {
+      const card = document.createElement("div"); card.className = "pp-pitch";
+      const head = document.createElement("div"); head.className = "ph";
+      const span = document.createElement("span"); span.textContent = it.title;
+      const actions = document.createElement("span");
+      const mk = (txt, fn) => { const b = document.createElement("button"); b.className = "ghost"; b.style.cssText = "font-size:11px;padding:4px 8px;margin-left:6px"; b.textContent = txt; b.onclick = fn; return b; };
+      actions.appendChild(mk("Copiar", (e) => { navigator.clipboard.writeText(it.body || it.title).then(() => { e.target.textContent = "Copiado ✓"; setTimeout(() => e.target.textContent = "Copiar", 1200); }); }));
+      actions.appendChild(mk("Editar", () => editLibItem(it)));
+      actions.appendChild(mk("Excluir", () => removeLibItem(it)));
+      head.appendChild(span); head.appendChild(actions);
+      const body = document.createElement("div"); body.className = "pb"; body.style.fontStyle = "normal"; body.style.whiteSpace = "pre-wrap"; body.textContent = it.body || "";
+      card.appendChild(head); card.appendChild(body); c.appendChild(card);
     });
-    html += '<div class="pp-section-label">Checklist do analista</div><ul class="pp-check">';
-    p.checklist.forEach(it => { html += `<li>☐ ${escapeHtml(it)}</li>`; });
-    html += "</ul>";
-    c.innerHTML = html;
-    c.querySelectorAll("[data-copy]").forEach(btn => {
-      btn.onclick = () => {
-        const txt = p.pitches[Number(btn.dataset.copy)].body;
-        navigator.clipboard.writeText(txt).then(() => { const o = btn.textContent; btn.textContent = "Copiado ✓"; setTimeout(() => btn.textContent = o, 1200); });
-      };
-    });
+  }
+
+  function editLibItem(it) {
+    el("libEditId").value = it.id; el("libNewTitle").value = it.title; el("libNewBody").value = it.body || "";
+    el("libFormLabel").textContent = "Editar item"; el("libAdd").textContent = "Salvar alterações"; el("libCancelEdit").classList.remove("hidden");
+    el("libNewTitle").scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  async function removeLibItem(it) {
+    if (!confirm("Excluir \"" + it.title + "\" do diretório?")) return;
+    await libDelete(it.id); await renderLibrary(); toast("Item excluído.");
+  }
+  async function addLibItem() {
+    const title = el("libNewTitle").value.trim();
+    const body = el("libNewBody").value.trim();
+    if (!title) { alert("Informe um título."); return; }
+    const id = el("libEditId").value;
+    await libSave({ id: id || undefined, dir: libDir, title, body }, id || null);
+    resetLibForm(); await renderLibrary(); toast("Item salvo no diretório.");
+  }
+
+  // Enviar conteúdo de um campo da atividade para um diretório
+  async function quickToLib(dir, body) {
+    const text = (body || "").trim();
+    if (!text) { alert("Preencha o campo antes de salvar na biblioteca."); return; }
+    const title = (el("evTitle").value.trim() || DIR_MAP[dir].label.replace(/^[^ ]+ /, "")) + " — " + el("evDate").value;
+    await libSave({ dir, title, body: text }, null);
+    toast("Salvo em " + DIR_MAP[dir].label + ".");
   }
 
   // ---------- Navegação ----------
@@ -833,11 +889,16 @@
     el("btnDelete").onclick = deleteEvent;
     el("overlay").onclick = (e) => { if (e.target === el("overlay")) closeModal(); };
 
-    el("btnPitches").onclick = openPitches;
-    el("closePitch").onclick = closePitches;
-    el("pitchOverlay").onclick = (e) => { if (e.target === el("pitchOverlay")) closePitches(); };
+    document.querySelectorAll(".lib-open").forEach(b => b.onclick = () => openLibrary(b.dataset.dir));
+    el("closeLib").onclick = closeLibrary;
+    el("libOverlay").onclick = (e) => { if (e.target === el("libOverlay")) closeLibrary(); };
+    el("libAdd").onclick = addLibItem;
+    el("libCancelEdit").onclick = resetLibForm;
+    el("evPitchToLib").onclick = () => quickToLib("pitch", el("evPitch").value);
+    el("evObjToLib").onclick = () => quickToLib("objecao", el("evObjections").value);
+    el("evNotesToLib").onclick = () => quickToLib("estrategia", el("evNotes").value);
 
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closePitches(); } });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closeLibrary(); } });
 
     el("teamFilter").onchange = () => { prefs.teamFilter = el("teamFilter").value; savePrefs(); render(); };
     el("btnExport").onclick = exportData;
